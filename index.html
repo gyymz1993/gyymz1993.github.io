@@ -287,8 +287,8 @@
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
+            <span class="ds-thread-count"  data-thread-key="2016/12/07/My-first-day-of-Github/" ></span>
         
-            <span class="disqus-comment-count" data-disqus-identifier="2016/12/07/My-first-day-of-Github/"></span>
         
     </a>
 
@@ -351,8 +351,8 @@
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
+            <span class="ds-thread-count"  data-thread-key="2016/12/07/My-New-Post/" ></span>
         
-            <span class="disqus-comment-count" data-disqus-identifier="2016/12/07/My-New-Post/"></span>
         
     </a>
 
@@ -415,8 +415,8 @@
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
+            <span class="ds-thread-count"  data-thread-key="2016/12/07/hello-world/" ></span>
         
-            <span class="disqus-comment-count" data-disqus-identifier="2016/12/07/hello-world/"></span>
         
     </a>
 
@@ -486,7 +486,7 @@
                 2016 Mr●Yang
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
@@ -532,23 +532,28 @@
 
 
     
-
-    
-        <script id="dsq-count-scr" src="//null.disqus.com/count.js" async></script>
         <script>
             if ($(".left-col").is(":visible")) {
-                var $disqusCount = $(".disqus-comment-count");
-                $disqusCount.bind("DOMNodeInserted", function(e) {
-                    var num = $(this).text().replace(/[^0-9]/ig,"");
-                    if (num > 0) {
+                var duoshuoQuery = {short_name:"gyymz1993"};
+                (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'http://static.duoshuo.com/embed.js';
+                    s.async = true; s.charset = 'UTF-8';
+                    (d.head || d.body).appendChild(s);
+                })();
+
+                $(document).ready(function(){
+                    var $duoshuoCount = $(".ds-thread-count");
+                    $duoshuoCount.bind("DOMNodeInserted", function(e) {
+                        var num = $(this).text().replace(/[^0-9]/ig,"");
                         $(this).siblings(".count-comment").text(num);
-                    }
-                    $(this).remove();
+                        $(this).remove();
+                    })
                 })
-            } else {
-                $(".disqus-comment-count").remove();
             }
         </script>
+    
+
      
 
 
