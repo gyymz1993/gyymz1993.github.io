@@ -4,9 +4,24 @@
   
     
     <entry>
-      <title><![CDATA[My first day of Github]]></title>
-      <url>http://yoursite.com/2016/12/07/My-first-day-of-Github/</url>
-      <content type="html"></content>
+      <title><![CDATA[熟悉Hexo]]></title>
+      <url>http://yoursite.com/2016/12/07/Hexo/</url>
+      <content type="html"><![CDATA[<p>分类和标签<br>categories:</p>
+<ul>
+<li>Diary<br>tags:</li>
+<li>PS3</li>
+<li>Games</li>
+</ul>
+<p>引用块<br>在文章中插入引言，可包含作者、来源和标题。</p>
+<p>别号： quote</p>
+<p>‘<blockquote><p>’<br>content<br>‘</p>
+<footer><strong>[author[</strong><cite>source]] [link] [source_link_title]</cite></footer></blockquote>’</p>
+<p>代码块<br>在文章中插入代码。<br>别名： code<br>‘<figure class="highlight plain"><figcaption><span>[title] [] [url] [link text]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">‘</div><div class="line">code snippet</div><div class="line">’</div></pre></td></tr></table></figure>’</p>
+<p>Image<br>在文章中插入指定大小的图片。<br>‘<img src="/path/to/image" class="[class names]" title="[width] [height] [title text [alt text]]">’</p>
+<p>Link<br>在文章中插入链接，并自动给外部链接添加 target=”_blank” 属性。<br>’<a>text url [external] [title]</a>‘</p>
+<p>Vimeo<br>在文章中插入 Vimeo 视频。<br>‘<div class="video-container"><iframe src="//player.vimeo.com/video/video_id" frameborder="0" allowfullscreen></iframe></div>’</p>
+<p>引用文章<br>引用其他文章的链接。<br>‘’<br>‘’</p>
+]]></content>
     </entry>
     
     <entry>
