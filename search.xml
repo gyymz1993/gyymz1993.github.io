@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title><![CDATA[熟悉Hexo]]></title>
-      <url>http://yoursite.com/2016/12/07/Hexo/</url>
-      <content type="html"><![CDATA[<p>欢迎我的博客，我会为你们奉献更多的干货，感谢大家的支持</p>
-<h2 id="Please-read-happily"><a href="#Please-read-happily" class="headerlink" title="Please read happily"></a>Please read happily</h2><a id="more"></a>
-<the rest="" of="" contents="" |="" 余下全文="">
-
-<p>分类和标签<br>categories:</p>
-<ul>
-<li>Diary<br>tags:</li>
-<li>PS3</li>
-<li>Games</li>
-</ul>
-<p>引用块<br>在文章中插入引言，可包含作者、来源和标题。</p>
-<p>别号： quote</p>
-<p>‘<blockquote><p>’<br>content<br>‘</p>
-<footer><strong>[author[</strong><cite>source]] [link] [source_link_title]</cite></footer></blockquote>’</p>
-<p>代码块<br>在文章中插入代码。<br>别名： code<br>‘<figure class="highlight plain"><figcaption><span>[title] [] [url] [link text]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">‘</div><div class="line">code snippet</div><div class="line">’</div></pre></td></tr></table></figure>’</p>
-<p>Image<br>在文章中插入指定大小的图片。<br>‘<img src="/path/to/image" class="[class names]" title="[width] [height] [title text [alt text]]">’</p>
-<p>Link<br>在文章中插入链接，并自动给外部链接添加 target=”_blank” 属性。<br>’<a>text url [external] [title]</a>‘</p>
-<p>Vimeo<br>在文章中插入 Vimeo 视频。<br>‘<div class="video-container"><iframe src="//player.vimeo.com/video/video_id" frameborder="0" allowfullscreen></iframe></div>’</p>
-<p>引用文章<br>引用其他文章的链接。<br>‘’<br>‘’</p>
-</the>]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[一些常用的MarkDown语法]]></title>
       <url>http://yoursite.com/2016/12/07/Hexo1/</url>
       <content type="html"><![CDATA[<p>欢迎我的小博，我正在努力学习，我会在不久将来给你们分享更多的干货，希望你们喜欢。</p>
@@ -55,6 +30,62 @@
 <li>为文章增加多个categories和tags<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$  语法：categories:</div><div class="line">          - hexo</div><div class="line">          - mardDown</div><div class="line">          tags:</div><div class="line">         - Github</div><div class="line">         - tags</div></pre></td></tr></table></figure>
 </li>
 </ul>
+</the>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[熟悉Hexo]]></title>
+      <url>http://yoursite.com/2016/12/07/Hexo/</url>
+      <content type="html"><![CDATA[<p>欢迎我的博客，我会为你们奉献更多的干货，感谢大家的支持</p>
+<h2 id="Please-read-happily"><a href="#Please-read-happily" class="headerlink" title="Please read happily"></a>Please read happily</h2><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<p>分类和标签<br>categories:</p>
+<ul>
+<li>Diary<br>tags:</li>
+<li>PS3</li>
+<li>Games</li>
+</ul>
+<p>引用块<br>在文章中插入引言，可包含作者、来源和标题。</p>
+<p>别号： quote</p>
+<p>‘<blockquote><p>’<br>content<br>‘</p>
+<footer><strong>[author[</strong><cite>source]] [link] [source_link_title]</cite></footer></blockquote>’</p>
+<p>代码块<br>在文章中插入代码。<br>别名： code<br>‘<figure class="highlight plain"><figcaption><span>[title] [] [url] [link text]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">‘</div><div class="line">code snippet</div><div class="line">’</div></pre></td></tr></table></figure>’</p>
+<p>Image<br>在文章中插入指定大小的图片。<br>‘<img src="/path/to/image" class="[class names]" title="[width] [height] [title text [alt text]]">’</p>
+<p>Link<br>在文章中插入链接，并自动给外部链接添加 target=”_blank” 属性。<br>’<a>text url [external] [title]</a>‘</p>
+<p>Vimeo<br>在文章中插入 Vimeo 视频。<br>‘<div class="video-container"><iframe src="//player.vimeo.com/video/video_id" frameborder="0" allowfullscreen></iframe></div>’</p>
+<p>引用文章<br>引用其他文章的链接。<br>‘’<br>‘’</p>
+</the>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[一些常用的MarkDown语法]]></title>
+      <url>http://yoursite.com/2016/12/07/MarkDowGrammar/</url>
+      <content type="html"><![CDATA[<p>欢迎我的小博，我正在努力学习，我会在不久将来给你们分享更多的干货，希望你们喜欢。</p>
+<h2 id="Please-read-happily"><a href="#Please-read-happily" class="headerlink" title="Please read happily"></a>Please read happily</h2><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文="">
+
+
+<ul>
+<li>######符号用于起始标签。&amp;符号则用于标记 HTML 实体,特殊字符自动转换</li>
+</ul>
+<h3 id="Markdown-支持以下这些符号前面加上反斜杠来帮助插入普通的符号："><a href="#Markdown-支持以下这些符号前面加上反斜杠来帮助插入普通的符号：" class="headerlink" title="Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号："></a>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</h3><p>  \     *     #   {}   `  _<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ 语法: \*   \<span class="comment">#</span></div></pre></td></tr></table></figure></p>
+<h3 id="字符也要转换。比如你要链接到："><a href="#字符也要转换。比如你要链接到：" class="headerlink" title="字符也要转换。比如你要链接到："></a>字符也要转换。比如你要链接到：</h3><p>1 在 HTML 文件中，有两个字符需要特殊处理： <strong><em>   &lt; 和 &amp;    </em></strong><br>如果你只是想要显示这些字符的原型，你必须要使用实体的形式。<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ 像是 &amp;lt;和 &amp;amp;</div></pre></td></tr></table></figure></p>
+<p>2 <a href="http://images.google.com/images?num=30&amp;q=larry+bird" target="_blank" rel="external">http://images.google.com/images?num=30&amp;q=larry+bird</a><br>你必须要把网址转换写为：<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  http://images.google.com/images?num=30&amp;amp;q=larry+bird</div></pre></td></tr></table></figure></p>
+<h3 id="文字加粗"><a href="#文字加粗" class="headerlink" title="文字加粗"></a>文字加粗</h3><ul>
+<li><strong>该文字是粗体</strong> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  加粗字体使用两个*或者一个_包起来</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="单行代码块"><a href="#单行代码块" class="headerlink" title="单行代码块"></a>单行代码块</h3><p><code>Hellow  word</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  单行代码块使用符号 `包起来</div></pre></td></tr></table></figure></p>
+<h3 id="多行代码块使用符号"><a href="#多行代码块使用符号" class="headerlink" title="多行代码块使用符号"></a>多行代码块使用符号</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Hellow  word</div><div class="line">Hellow  word</div><div class="line">Hellow  word</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$   多行代码块使用符号  ``` 包起来</div></pre></td></tr></table></figure>
+<h3 id="这是引用的文字"><a href="#这是引用的文字" class="headerlink" title="这是引用的文字"></a>这是引用的文字</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  引用的文字前面加&gt;</div></pre></td></tr></table></figure>
+<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$  语法：[你要显示的文字](链接的地址)</div><div class="line">     例如：[简书](http://www.jianshu.com)</div></pre></td></tr></table></figure>
+<h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$  语法：[站外图片上传中……(1)]</div><div class="line">     例如：[站外图片上传中……(2)]</div><div class="line">     注：当想插入本地图片时，直接将图片拖入你要放的位置*</div></pre></td></tr></table></figure>
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$  语法：直接输入数字加空格</div><div class="line">     例如：1 是有序1</div></pre></td></tr></table></figure>
+<p>###无序列表<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  语法：直接-加空格或者*</div></pre></td></tr></table></figure></p>
+<h3 id="使用标题栏"><a href="#使用标题栏" class="headerlink" title="使用标题栏"></a>使用标题栏</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$  语法：<span class="comment"># 这是 H1</span></div><div class="line">         <span class="comment">## 这是 H2</span></div><div class="line">         <span class="comment">###### 这是 H6</span></div></pre></td></tr></table></figure>
+<h3 id="Github为文章增加多个categories和tags"><a href="#Github为文章增加多个categories和tags" class="headerlink" title="Github为文章增加多个categories和tags"></a>Github为文章增加多个categories和tags</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$  语法：categories:</div><div class="line">         - hexo</div><div class="line">         - mardDown</div><div class="line">         tags:</div><div class="line">         - Github</div><div class="line">         - tags</div></pre></td></tr></table></figure>
 </the>]]></content>
     </entry>
     
