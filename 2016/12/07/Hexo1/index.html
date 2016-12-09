@@ -18,14 +18,14 @@
 <meta name="description" content="欢迎我的博客，我会为你们奉献更多的干货，感谢大家的支持
 Please read happily">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的gitHub之旅">
-<meta property="og:url" content="http://yoursite.com/2016/12/07/我的gitHub之旅/index.html">
+<meta property="og:title" content="一些常用的MarkDown语法">
+<meta property="og:url" content="http://yoursite.com/2016/12/07/Hexo1/index.html">
 <meta property="og:site_name" content="择高处立，向宽处行">
 <meta property="og:description" content="欢迎我的博客，我会为你们奉献更多的干货，感谢大家的支持
 Please read happily">
-<meta property="og:updated_time" content="2016-12-08T08:02:24.517Z">
+<meta property="og:updated_time" content="2016-12-09T03:47:50.454Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的gitHub之旅">
+<meta name="twitter:title" content="一些常用的MarkDown语法">
 <meta name="twitter:description" content="欢迎我的博客，我会为你们奉献更多的干货，感谢大家的支持
 Please read happily">
 
@@ -59,7 +59,7 @@ Please read happily">
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>我的gitHub之旅 | 择高处立，向宽处行</title>
+<title>一些常用的MarkDown语法 | 择高处立，向宽处行</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -283,15 +283,15 @@ Please read happily">
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-我的gitHub之旅" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Hexo1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/12/07/我的gitHub之旅/" class="article-date">
-      <time datetime="2016-12-07T07:28:38.000Z" itemprop="datePublished">2016-12-07</time>
+      <a href="/2016/12/07/Hexo1/" class="article-date">
+      <time datetime="2016-12-07T07:29:30.000Z" itemprop="datePublished">2016-12-07</time>
 </a>
 
  
-    <a href="/2016/12/07/我的gitHub之旅/#comments" title="Comments">
+    <a href="/2016/12/07/Hexo1/#comments" title="Comments">
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
@@ -311,7 +311,7 @@ Please read happily">
         
   
     <h1 class="article-title" itemprop="name">
-      我的gitHub之旅
+      一些常用的MarkDown语法
     </h1>
   
 
@@ -322,7 +322,7 @@ Please read happily">
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github-hexo/">github hexo</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mardown/">mardown</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -336,7 +336,56 @@ Please read happily">
 <h2 id="Please-read-happily"><a href="#Please-read-happily" class="headerlink" title="Please read happily"></a>Please read happily</h2><a id="more"></a>
 <the rest="" of="" contents="" |="" 余下全文="">
 
-<h3 id="参照文档-Hexo-Yelee"><a href="#参照文档-Hexo-Yelee" class="headerlink" title="参照文档 Hexo_Yelee"></a>参照文档 <a href="http://moxfive.coding.me/yelee/" target="_blank" rel="external">Hexo_Yelee</a></h3><h3 id="学习Hexo写作教程-Hexo"><a href="#学习Hexo写作教程-Hexo" class="headerlink" title="学习Hexo写作教程 Hexo"></a>学习Hexo写作教程 <a href="https://hexo.io/zh-cn/docs/tag-plugins.html" target="_blank" rel="external">Hexo</a></h3></the>
+
+<ul>
+<li>######符号用于起始标签。&amp;符号则用于标记 HTML 实体,特殊字符自动转换</li>
+</ul>
+<ul>
+<li>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：<br>\     *     #   {}   `  _ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ 语法: \*   \<span class="comment">#</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>字符也要转换。比如你要链接到：<br>1 在 HTML 文件中，有两个字符需要特殊处理： <strong><em>   &lt; 和 &amp;    </em></strong><br>如果你只是想要显示这些字符的原型，你必须要使用实体的形式。<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ 像是 &amp;lt;和 &amp;amp;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>2 <a href="http://images.google.com/images?num=30&amp;q=larry+bird" target="_blank" rel="external">http://images.google.com/images?num=30&amp;q=larry+bird</a><br>你必须要把网址转换写为：<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  http://images.google.com/images?num=30&amp;amp;q=larry+bird</div></pre></td></tr></table></figure></p>
+<ul>
+<li><p><strong>该文字是粗体</strong>  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  加粗字体使用两个*或者一个_包起来</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>Hellow  word</code>      </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  单行代码块使用符号 `包起来</div></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Hellow  word</div><div class="line">Hellow  word</div><div class="line">Hellow  word</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$   多行代码块使用符号  ``` 包起来</div></pre></td></tr></table></figure>
+<ul>
+<li><blockquote>
+<p> 这是引用的文字       </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  引用的文字前面加&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>链接</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$  语法：[你要显示的文字](链接的地址)</div><div class="line">     例如：[简书](http://www.jianshu.com)</div></pre></td></tr></table></figure>
+</li>
+<li><p>插入图片</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$  语法：[站外图片上传中……(1)]</div><div class="line">     例如：[站外图片上传中……(2)]</div><div class="line">     注：当想插入本地图片时，直接将图片拖入你要放的位置*</div></pre></td></tr></table></figure>
+</li>
+<li><p>有序列表</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$  语法：直接输入数字加空格</div><div class="line">     例如：1 是有序1</div></pre></td></tr></table></figure>
+</li>
+<li><p>无序列表</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  语法：直接-加空格或者*</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用标题栏</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$  语法：<span class="comment"># 这是 H1</span></div><div class="line">          <span class="comment">## 这是 H2</span></div><div class="line">          <span class="comment">###### 这是 H6</span></div></pre></td></tr></table></figure>
+</li>
+<li><h3 id="Github中一些特殊形式"><a href="#Github中一些特殊形式" class="headerlink" title="Github中一些特殊形式"></a>Github中一些特殊形式</h3></li>
+<li>为文章增加多个categories和tags<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$  语法：categories:</div><div class="line">          - hexo</div><div class="line">          - mardDown</div><div class="line">          tags:</div><div class="line">         - Github</div><div class="line">         - tags</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</the>
       
     </div>
     
@@ -344,13 +393,13 @@ Please read happily">
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2016/12/07/我的gitHub之旅/">我的gitHub之旅</a></p>
+        <p><span>Title:</span><a href="/2016/12/07/Hexo1/">一些常用的MarkDown语法</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Mr●Yang</a></p>
-        <p><span>Created:</span>2016-12-07, 15:28:38</p>
-        <p><span>Updated:</span>2016-12-08, 16:02:24</p>
+        <p><span>Created:</span>2016-12-07, 15:29:30</p>
+        <p><span>Updated:</span>2016-12-09, 11:47:50</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2016/12/07/我的gitHub之旅/" title="我的gitHub之旅">http://yoursite.com/2016/12/07/我的gitHub之旅/</a>
-            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2016/12/07/我的gitHub之旅/　　By Mr●Yang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2016/12/07/Hexo1/" title="一些常用的MarkDown语法">http://yoursite.com/2016/12/07/Hexo1/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2016/12/07/Hexo1/　　By Mr●Yang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -363,15 +412,15 @@ Please read happily">
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/12/07/Hexo1/">
-                    一些常用的MarkDown语法
+                <a href="/2016/12/07/Hexo/">
+                    熟悉Hexo
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/12/07/hello-world/">
-                    Hello World
+                <a href="/2016/12/07/我的gitHub之旅/">
+                    我的gitHub之旅
                 </a>
             </div>
         
@@ -383,7 +432,7 @@ Please read happily">
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Please-read-happily"><span class="toc-number">1.</span> <span class="toc-text">Please read happily</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#参照文档-Hexo-Yelee"><span class="toc-number">1.1.</span> <span class="toc-text">参照文档 Hexo_Yelee</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#学习Hexo写作教程-Hexo"><span class="toc-number">1.2.</span> <span class="toc-text">学习Hexo写作教程 Hexo</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Please-read-happily"><span class="toc-number">1.</span> <span class="toc-text">Please read happily</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Github中一些特殊形式"><span class="toc-number">1.1.</span> <span class="toc-text">Github中一些特殊形式</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -419,7 +468,7 @@ Please read happily">
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"我的gitHub之旅　| 择高处立，向宽处行　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"一些常用的MarkDown语法　| 择高处立，向宽处行　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -435,7 +484,7 @@ Please read happily">
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/12/07/我的gitHub之旅/" data-title="我的gitHub之旅" data-url="http://yoursite.com/2016/12/07/我的gitHub之旅/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/12/07/Hexo1/" data-title="一些常用的MarkDown语法" data-url="http://yoursite.com/2016/12/07/Hexo1/"></div>
     <script>
         var duoshuoQuery = {short_name:"gyymz1993"};
         var loadComment = function(){
@@ -459,7 +508,7 @@ Please read happily">
         
             // Add comment count
             $(function(){ 
-                var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=gyymz1993&threads=2016/12/07/我的gitHub之旅/&callback=?";
+                var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=gyymz1993&threads=2016/12/07/Hexo1/&callback=?";
                 $.getJSON(jsonUrl, function(result){
                     $.each(result.response, function(i, field){
                         var value = field.comments;
@@ -506,7 +555,7 @@ Please read happily">
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/12/07/Hexo1/" title="Pre: 一些常用的MarkDown语法">
+            <a href="/2016/12/07/Hexo/" title="Pre: 熟悉Hexo">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -514,7 +563,7 @@ Please read happily">
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/12/07/hello-world/" title="Next: Hello World">
+            <a href="/2016/12/07/我的gitHub之旅/" title="Next: 我的gitHub之旅">
                 <i class="fa fa-angle-right"></i>
             </a>
         
