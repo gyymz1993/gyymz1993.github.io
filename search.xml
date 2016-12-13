@@ -4,8 +4,8 @@
   
     
     <entry>
-      <title><![CDATA[手把手教你Git安装、配置和使用]]></title>
-      <url>https://gyymz1993.github.io/2016/12/12/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0Git%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8/</url>
+      <title><![CDATA[手把手教你Git安装、配置和使用以及博客搭建]]></title>
+      <url>https://gyymz1993.github.io/2016/12/12/Git/</url>
       <content type="html"><![CDATA[<p>欢迎我的小博，我正在努力学习，我会在不久将来给你们分享更多的干货，希望你们喜欢。</p>
 <h2 id="Please-read-happily"><a href="#Please-read-happily" class="headerlink" title="Please read happily"></a>Please read happily</h2><a id="more"></a>
 <the rest="" of="" contents="" |="" 余下全文="">
@@ -24,7 +24,9 @@
 <h3 id="妈蛋居然提示失败，我发现我复制的时候没有复制完全，纯属意外"><a href="#妈蛋居然提示失败，我发现我复制的时候没有复制完全，纯属意外" class="headerlink" title="妈蛋居然提示失败，我发现我复制的时候没有复制完全，纯属意外"></a>妈蛋居然提示失败，我发现我复制的时候没有复制完全，纯属意外</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$  ssh -T git@github.com</div><div class="line">Hi gyymz1993! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</div></pre></td></tr></table></figure>
 <p>这个提示就表示成功了</p>
 <h3 id="这个命令可以查看出错信息"><a href="#这个命令可以查看出错信息" class="headerlink" title="这个命令可以查看出错信息"></a>这个命令可以查看出错信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  shh -T -v git@github.com</div></pre></td></tr></table></figure>
-<h1 id="现在就是最实用最牛逼得部分了"><a href="#现在就是最实用最牛逼得部分了" class="headerlink" title="现在就是最实用最牛逼得部分了"></a>现在就是最实用最牛逼得部分了</h1><h3 id="提交本地项目步骤"><a href="#提交本地项目步骤" class="headerlink" title="提交本地项目步骤"></a>提交本地项目步骤</h3><p>1 在gitHub新建个项目（这个不会自行百度）<br>2 命令提交</p>
+<p><br></p>
+<h1 id="现在就是最实用最牛逼得部分了"><a href="#现在就是最实用最牛逼得部分了" class="headerlink" title="现在就是最实用最牛逼得部分了"></a>现在就是最实用最牛逼得部分了</h1><p><br></p>
+<h3 id="提交本地项目步骤"><a href="#提交本地项目步骤" class="headerlink" title="提交本地项目步骤"></a>提交本地项目步骤</h3><p>1 在gitHub新建个项目（这个不会自行百度）<br>2 命令提交</p>
 <h3 id="增加注释文件"><a href="#增加注释文件" class="headerlink" title="增加注释文件"></a>增加注释文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  echo &quot;# MstarStoreApp&quot; &gt;&gt; README.md</div></pre></td></tr></table></figure>
 <p>第一步想当然注释告诉别人这个项目是干嘛的</p>
 <h3 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a>初始化仓库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  git init</div></pre></td></tr></table></figure>
@@ -33,6 +35,21 @@
 <h3 id="你的gitHub项目的SSH路径"><a href="#你的gitHub项目的SSH路径" class="headerlink" title="你的gitHub项目的SSH路径"></a>你的gitHub项目的SSH路径</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  git remote add origin git@github.com:yourname/XXX.git</div></pre></td></tr></table></figure>
 <h3 id="最后一步就是提交了"><a href="#最后一步就是提交了" class="headerlink" title="最后一步就是提交了"></a>最后一步就是提交了</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  git push -u origin master</div></pre></td></tr></table></figure>
 <h3 id="下载一个项目到本地"><a href="#下载一个项目到本地" class="headerlink" title="下载一个项目到本地"></a>下载一个项目到本地</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  git clone git@github.com:yourname/XXX.git</div></pre></td></tr></table></figure>
+<p><br></p>
+<h1 id="更牛逼的部分，搭建自己的博客"><a href="#更牛逼的部分，搭建自己的博客" class="headerlink" title="更牛逼的部分，搭建自己的博客"></a>更牛逼的部分，搭建自己的博客</h1><p><br></p>
+<h3 id="需要用到的工具node-js-msi-下载"><a href="#需要用到的工具node-js-msi-下载" class="headerlink" title="需要用到的工具node.js.msi 下载"></a>需要用到的工具<a href="http://nodejs.cn/download/" target="_blank" rel="external">node.js.msi</a> 下载</h3><h5 id="安装只需要一直next就可以"><a href="#安装只需要一直next就可以" class="headerlink" title="安装只需要一直next就可以"></a>安装只需要一直next就可以</h5><h3 id="next完后测试是否安装成功"><a href="#next完后测试是否安装成功" class="headerlink" title="next完后测试是否安装成功"></a>next完后测试是否安装成功</h3><h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$  找到安装目录    C:\node</div><div class="line">   配置环境变量  path  加上  C:\node</div></pre></td></tr></table></figure>
+<h3 id="测试方法"><a href="#测试方法" class="headerlink" title="测试方法"></a>测试方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  npm --v</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  node -v</div></pre></td></tr></table></figure>
+<h4 id="如果出现版本号则正确安装"><a href="#如果出现版本号则正确安装" class="headerlink" title="如果出现版本号则正确安装"></a>如果出现版本号则正确安装</h4><h3 id="本地博客环境创建-安装hexo"><a href="#本地博客环境创建-安装hexo" class="headerlink" title="本地博客环境创建 安装hexo"></a>本地博客环境创建 安装hexo</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  npm install -g hexo</div></pre></td></tr></table></figure>
+<h3 id="保存安装"><a href="#保存安装" class="headerlink" title="保存安装"></a>保存安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  npm install hexo --save</div></pre></td></tr></table></figure>
+<h3 id="查看-hexo是否安装成功"><a href="#查看-hexo是否安装成功" class="headerlink" title="查看 hexo是否安装成功"></a>查看 hexo是否安装成功</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  hexo -v</div></pre></td></tr></table></figure>
+<h3 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  hexo init</div></pre></td></tr></table></figure>
+<h3 id="开始本地服务"><a href="#开始本地服务" class="headerlink" title="开始本地服务"></a>开始本地服务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  hexo s</div></pre></td></tr></table></figure>
+<p>再浏览器中输入 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>    即可浏览</p>
+<h3 id="找到hexo目录下的D-Git-Hexo-config-yml文件修改项目中的ssh路径"><a href="#找到hexo目录下的D-Git-Hexo-config-yml文件修改项目中的ssh路径" class="headerlink" title="找到hexo目录下的D:\Git\Hexo_config.yml文件修改项目中的ssh路径"></a>找到hexo目录下的D:\Git\Hexo_config.yml文件修改项目中的ssh路径</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:yourname/yourname.github-io.git</div></pre></td></tr></table></figure>
+<h3 id="修改成这样执行"><a href="#修改成这样执行" class="headerlink" title="修改成这样执行"></a>修改成这样执行</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<h3 id="生成静态网页"><a href="#生成静态网页" class="headerlink" title="生成静态网页"></a>生成静态网页</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div></pre></td></tr></table></figure>
+<h3 id="部署到服务器"><a href="#部署到服务器" class="headerlink" title="部署到服务器"></a>部署到服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo d</div></pre></td></tr></table></figure>
 </the>]]></content>
     </entry>
     
