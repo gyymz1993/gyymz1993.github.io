@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gyymz1993.github.io/"/>
-  <updated>2016-12-13T07:39:43.328Z</updated>
+  <updated>2016-12-14T07:01:51.484Z</updated>
   <id>https://gyymz1993.github.io/</id>
   
   <author>
@@ -20,14 +20,16 @@
     <link href="https://gyymz1993.github.io/2016/12/12/Git/"/>
     <id>https://gyymz1993.github.io/2016/12/12/Git/</id>
     <published>2016-12-12T07:28:38.000Z</published>
-    <updated>2016-12-13T07:39:43.328Z</updated>
+    <updated>2016-12-14T07:01:51.484Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎我的小博，我正在努力学习，我会在不久将来给你们分享更多的干货，希望你们喜欢。</p>
 <h2 id="Please-read-happily"><a href="#Please-read-happily" class="headerlink" title="Please read happily"></a>Please read happily</h2><a id="more"></a>
 <the rest="" of="" contents="" |="" 余下全文="">
 
+
 <h3 id="需要用到的工具"><a href="#需要用到的工具" class="headerlink" title="需要用到的工具"></a>需要用到的工具</h3><p><img src="http://upload-images.jianshu.io/upload_images/433829-b5b729f1b3dbfe38.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="git.exe"></p>
-<h3 id="安装Git只需要一直next就可以"><a href="#安装Git只需要一直next就可以" class="headerlink" title="安装Git只需要一直next就可以"></a>安装Git只需要一直next就可以</h3><h3 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h3><p>1 首先去用邮箱注册<a href="https://github.com/" target="_blank" rel="external">GitHub</a>账号<br>2 测试git是否安装成功 启动程序GitBash<br>3 终端配置</p>
+<h3 id="安装Git只需要一直next就可以"><a href="#安装Git只需要一直next就可以" class="headerlink" title="安装Git只需要一直next就可以"></a>安装Git只需要一直next就可以</h3><p>1 首先去用邮箱注册<a href="https://github.com/" target="_blank" rel="external">GitHub</a>账号<br>2 测试git是否安装成功 启动程序GitBash<br>3 终端配置</p>
+<h2 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h2><p><br></p>
 <h3 id="配置用户名"><a href="#配置用户名" class="headerlink" title="配置用户名"></a>配置用户名</h3><p><code>$ git config --global user.name.你的用户名</code></p>
 <h3 id="配置邮箱"><a href="#配置邮箱" class="headerlink" title="配置邮箱"></a>配置邮箱</h3><p><code>$ git config --global user.email 你的邮箱</code></p>
 <h3 id="保存"><a href="#保存" class="headerlink" title="保存"></a>保存</h3><p><code>$ git config --global alias.ymz(这个随意) commit</code></p>
@@ -66,7 +68,14 @@
 <h3 id="修改成这样执行"><a href="#修改成这样执行" class="headerlink" title="修改成这样执行"></a>修改成这样执行</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
 <h3 id="生成静态网页"><a href="#生成静态网页" class="headerlink" title="生成静态网页"></a>生成静态网页</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div></pre></td></tr></table></figure>
 <h3 id="部署到服务器"><a href="#部署到服务器" class="headerlink" title="部署到服务器"></a>部署到服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo d</div></pre></td></tr></table></figure>
-</the>]]></content>
+<h1 id="折腾（换电脑后使用）-目前自己笨方法"><a href="#折腾（换电脑后使用）-目前自己笨方法" class="headerlink" title="折腾（换电脑后使用） 目前自己笨方法"></a>折腾（换电脑后使用） 目前自己笨方法</h1><p><br></p>
+<h3 id="前面得操作一样，紧跟着初-始化hexo后用原来的博文文件替换现在的文件"><a href="#前面得操作一样，紧跟着初-始化hexo后用原来的博文文件替换现在的文件" class="headerlink" title="前面得操作一样，紧跟着初 ##始化hexo后用原来的博文文件替换现在的文件"></a>前面得操作一样，紧跟着初 ##始化hexo后用原来的博文文件替换现在的文件</h3><p>1 Hexo\node_modules（这个其实就是你安装的插件什么搜索系统啊之类的）<br>2 _config.yml 你自己的配置文件<br>3 \Hexo\source 目录下你的所有博客文件<br>4 themes\yelee 这个是你的主题文件<br>当你替换好之后开始接着到</p>
+<p>开始本地服务&gt;后的操作</p>
+<h3 id="直到最后一步部署到服务器"><a href="#直到最后一步部署到服务器" class="headerlink" title="直到最后一步部署到服务器"></a>直到最后一步部署到服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo d</div><div class="line">ERROR Deployer not found: git</div></pre></td></tr></table></figure>
+<p>这是咋回事呢？</p>
+<h3 id="重新安装deployer"><a href="#重新安装deployer" class="headerlink" title="重新安装deployer"></a>重新安装deployer</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git</div></pre></td></tr></table></figure>
+<h3 id="保存安装deployer"><a href="#保存安装deployer" class="headerlink" title="保存安装deployer"></a>保存安装deployer</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<h1 id="Hexo-node-modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装"><a href="#Hexo-node-modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装" class="headerlink" title="Hexo\node_modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装"></a>Hexo\node_modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装</h1><h1 id="Hexo-node-modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装-1"><a href="#Hexo-node-modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装-1" class="headerlink" title="Hexo\node_modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装"></a>Hexo\node_modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装</h1><h1 id="Hexo-node-modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装-2"><a href="#Hexo-node-modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装-2" class="headerlink" title="Hexo\node_modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装"></a>Hexo\node_modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装</h1></the>]]></content>
     
     <summary type="html">
     
@@ -76,11 +85,11 @@
     </summary>
     
     
+      <category term="hexo" scheme="https://gyymz1993.github.io/tags/hexo/"/>
+    
       <category term="git" scheme="https://gyymz1993.github.io/tags/git/"/>
     
       <category term="gitHub" scheme="https://gyymz1993.github.io/tags/gitHub/"/>
-    
-      <category term="hexo" scheme="https://gyymz1993.github.io/tags/hexo/"/>
     
   </entry>
   
@@ -806,11 +815,11 @@
       <category term="术业专攻" scheme="https://gyymz1993.github.io/categories/%E6%9C%AF%E4%B8%9A%E4%B8%93%E6%94%BB/"/>
     
     
-      <category term="Markdown" scheme="https://gyymz1993.github.io/tags/Markdown/"/>
-    
       <category term="CSS" scheme="https://gyymz1993.github.io/tags/CSS/"/>
     
       <category term="JavaScript" scheme="https://gyymz1993.github.io/tags/JavaScript/"/>
+    
+      <category term="Markdown" scheme="https://gyymz1993.github.io/tags/Markdown/"/>
     
       <category term="Table" scheme="https://gyymz1993.github.io/tags/Table/"/>
     
