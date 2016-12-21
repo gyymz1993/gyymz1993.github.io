@@ -6,7 +6,11 @@
     <entry>
       <title><![CDATA[开发之Svn安装使用]]></title>
       <url>https://gyymz1993.github.io/2016/12/21/Svn/</url>
-      <content type="html"><![CDATA[<p> <strong>为什么要使用SVN？</strong><br>      程序员在编写程序的过程中，每个程序员都会生成很多不同的版本，这就需要程序员有效的管理代码，在需要的时候可以迅速，准确取出相应的版本。<br><strong>Subversion是什么？</strong><br>   它是一个自由/开源的版本控制系统，一组文件存放在中心版本库，记录每一次文件和目录的修改，Subversion允许把数据恢复到早期版本，或是检查数据修改的历史，Subversion可以通过网络访问它的版本库，从而使用户在不同的电脑上进行操作。</p>
+      <content type="html"><![CDATA[<p>欢迎我的小博，我正在努力学习，我会在不久将来给你们分享更多的干货，希望你们喜欢。</p>
+<h2 id="Please-read-happily"><a href="#Please-read-happily" class="headerlink" title="Please read happily"></a>Please read happily</h2><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<p> <strong>为什么要使用SVN？</strong><br>      程序员在编写程序的过程中，每个程序员都会生成很多不同的版本，这就需要程序员有效的管理代码，在需要的时候可以迅速，准确取出相应的版本。<br><strong>Subversion是什么？</strong><br>   它是一个自由/开源的版本控制系统，一组文件存放在中心版本库，记录每一次文件和目录的修改，Subversion允许把数据恢复到早期版本，或是检查数据修改的历史，Subversion可以通过网络访问它的版本库，从而使用户在不同的电脑上进行操作。</p>
 <h3 id="SVN服务器搭建和使用。"><a href="#SVN服务器搭建和使用。" class="headerlink" title="SVN服务器搭建和使用。"></a>SVN服务器搭建和使用。</h3><p>   <strong>1.     首先来下载和搭建SVN服务器,下载地址如下: <a href="http://subversion.apache.org/packages.html" target="_blank" rel="external">http://subversion.apache.org/packages.html</a>，进入网址后，滚动到浏览器最底部看到如下截图：</strong></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/433829-b8d72dc66da8fa49.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="VisualSvn"></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/433829-227710abe31fcc6c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="VisualSvn"></p>
@@ -23,7 +27,7 @@
 <h3 id="1-安装成功后设置环境变量"><a href="#1-安装成功后设置环境变量" class="headerlink" title=" 1. 安装成功后设置环境变量 "></a><strong> 1. 安装成功后设置环境变量 </strong></h3><p><img src="http://upload-images.jianshu.io/upload_images/433829-664cd5d03befdee8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 <h3 id="2-设置AndroidStudio路径"><a href="#2-设置AndroidStudio路径" class="headerlink" title=" 2. 设置AndroidStudio路径 "></a><strong> 2. 设置AndroidStudio路径 </strong></h3><p><img src="http://upload-images.jianshu.io/upload_images/433829-71f9a5fe1d48c555.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 <h2 id="引用文章地址"><a href="#引用文章地址" class="headerlink" title="引用文章地址"></a>引用文章地址</h2><p> <a href="http://www.cnblogs.com/armyfai/p/3985660.html" target="_blank" rel="external">http://www.cnblogs.com/armyfai/p/3985660.html</a>**</p>
-]]></content>
+</the>]]></content>
     </entry>
     
     <entry>
