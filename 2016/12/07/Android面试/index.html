@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Mr●Yang" />
+
+
+
+<meta name="description" content="欢迎我的博客，我会为你们奉献更多的干货，感谢大家的支持
+Please read happily">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android面试">
+<meta property="og:url" content="https://gyymz1993.github.io/2016/12/07/Android面试/index.html">
+<meta property="og:site_name" content="择高处立，向宽处行">
+<meta property="og:description" content="欢迎我的博客，我会为你们奉献更多的干货，感谢大家的支持
+Please read happily">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/433829-b32d2883fc674dd0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-02-14T01:01:21.979Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android面试">
+<meta name="twitter:description" content="欢迎我的博客，我会为你们奉献更多的干货，感谢大家的支持
+Please read happily">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/433829-b32d2883fc674dd0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="择高处立，向宽处行" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/img/yang.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>Android面试 | 择高处立，向宽处行</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/yang.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Mr●Yang</a></h1>
+        </hgroup>
+
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>Menu</li>
+                        <li>Tags</li>
+                        
+                        <li>Friends</li>
+                        
+                        
+                        <li>About Me</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="/gyymz1993@126.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" href="http://www.weibo.com/gyymz1993/home?topnav=1&wvr=6" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/gyymz1993" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa 知乎" href="https://www.zhihu.com/people/yang-shao-83-77/activities" title="知乎"></a>
+                            
+                                <a class="fa 简书" href="http://www.jianshu.com/users/64205f9b4145/timeline" title="简书"></a>
+                            
+                                <a class="fa CSDN" href="http://blog.csdn.net/gyymz1992" title="CSDN"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fight/">Fight</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Injury/">Injury</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shocking/">Shocking</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Subversion/">Subversion</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TortoiseSVN/">TortoiseSVN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VisualSVN/">VisualSVN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gitHub/">gitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github-hexo/">github hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mardown/">mardown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svn/">svn</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">Android工程师</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Mr●Yang</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/yang.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Mr●Yang</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="/gyymz1993@126.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="http://www.weibo.com/gyymz1993/home?topnav=1&wvr=6" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/gyymz1993" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/yang-shao-83-77/activities" title="知乎"></a>
+                            
+                                <a class="fa 简书" target="_blank" href="http://www.jianshu.com/users/64205f9b4145/timeline" title="简书"></a>
+                            
+                                <a class="fa CSDN" target="_blank" href="http://blog.csdn.net/gyymz1992" title="CSDN"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+</nav>
+      <div class="body-wrap"><article id="post-Android面试" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/07/Android面试/" class="article-date">
+      <time datetime="2016-12-07T07:29:30.000Z" itemprop="datePublished">2016-12-07</time>
+</a>
+
+ 
+    <a href="/2016/12/07/Android面试/#comments" title="Comments">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+            <span class="ds-thread-count" ></span>
+        
+        
+    </a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Android面试
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>欢迎我的博客，我会为你们奉献更多的干货，感谢大家的支持</p>
+<h2 id="Please-read-happily"><a href="#Please-read-happily" class="headerlink" title="Please read happily"></a>Please read happily</h2><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<p>分类和标签<br>categories:</p>
+<ul>
+<li>Android<br>tags:</li>
+<li>面试</li>
+</ul>
+<h2 id="经典中的经典四大组件"><a href="#经典中的经典四大组件" class="headerlink" title="经典中的经典四大组件"></a>经典中的经典四大组件</h2><p>1 Activity<br>2 Service<br>3 BroadCastRevceiver<br>4 ContentProviders</p>
+<h3 id="Activity必须要了解的知识点"><a href="#Activity必须要了解的知识点" class="headerlink" title="Activity必须要了解的知识点"></a>Activity必须要了解的知识点</h3><p>Activity的生命周期？<br><img src="http://upload-images.jianshu.io/upload_images/433829-b32d2883fc674dd0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<h6 id="当我们启动一个Activity执行流程"><a href="#当我们启动一个Activity执行流程" class="headerlink" title="当我们启动一个Activity执行流程"></a>当我们启动一个Activity执行流程</h6><p>onCreate-&gt;onStart-&gt;onResume</p>
+<h6 id="Activity退居后台-当我们点击返回后执行流程"><a href="#Activity退居后台-当我们点击返回后执行流程" class="headerlink" title="Activity退居后台:当我们点击返回后执行流程"></a>Activity退居后台:当我们点击返回后执行流程</h6><p>onPause-&gt;onStop-&gt;onDestory</p>
+<h6 id="Activity退居后台-当我们点击Home后执行流程或者跳转新的Activity"><a href="#Activity退居后台-当我们点击Home后执行流程或者跳转新的Activity" class="headerlink" title="Activity退居后台:当我们点击Home后执行流程或者跳转新的Activity"></a>Activity退居后台:当我们点击Home后执行流程或者跳转新的Activity</h6><p>onPaused-&gt;onStop</p>
+<h6 id="Activity返回前台-当我们点击Home后再次进入Activity"><a href="#Activity返回前台-当我们点击Home后再次进入Activity" class="headerlink" title="Activity返回前台:当我们点击Home后再次进入Activity"></a>Activity返回前台:当我们点击Home后再次进入Activity</h6><p>onRestart-&gt;onStart-&gt;onResume</p>
+<h6 id="锁屏-onPause-gt-Stop"><a href="#锁屏-onPause-gt-Stop" class="headerlink" title="锁屏:onPause-&gt;Stop"></a>锁屏:onPause-&gt;Stop</h6><h6 id="解锁-onReStart-gt-onStart-gt-onResume"><a href="#解锁-onReStart-gt-onStart-gt-onResume" class="headerlink" title="解锁 :onReStart-&gt;onStart-&gt;onResume"></a>解锁 :onReStart-&gt;onStart-&gt;onResume</h6><h6 id="理解清楚整个生命周期中只有三个状态是稳定的，其他都是属于过渡状态很重要。"><a href="#理解清楚整个生命周期中只有三个状态是稳定的，其他都是属于过渡状态很重要。" class="headerlink" title="理解清楚整个生命周期中只有三个状态是稳定的，其他都是属于过渡状态很重要。"></a>理解清楚整个生命周期中只有三个状态是稳定的，其他都是属于过渡状态很重要。</h6><p>Resume:此时Activity处于运行状态位于栈顶，能和用户交互的状态；<br>Paused:此时Activity处理半遮挡状态，这个状态不能接受用户输入；<br>Stopped:完全被覆盖，也就是此Activity已经不可见了。</p>
+<h5 id="Activity中缓存方法以及数据恢复机制"><a href="#Activity中缓存方法以及数据恢复机制" class="headerlink" title="Activity中缓存方法以及数据恢复机制"></a>Activity中缓存方法以及数据恢复机制</h5><p>在Activity中提供了两个很重要的方法</p>
+<ul>
+<li>onSaveInstanceState()</li>
+<li>onRestoreInstanceState()</li>
+</ul>
+<p>######当Activity在未经你的许可，也就不是你人为销毁此Activity的情况下都会执行onSvaInstanceState方法来保存你的数据，举例说明几种情况会执行onSaveInstanceState<br>1 当用户按下Home键；<br>并且onSaveInstanceState中能保证在onStop之前执行，可能会在onPause之前也可能在后面。<br>2 长按Home键选择其他程序；<br>3 按下电源键关闭屏幕显示时；<br>4 从Activity中启动一个新的Activity<br>5 当屏幕方向切换时，如果没有指定ConfigChange属性<br>onSaveInstanceState方法的一般都是 记录Activity和UI的瞬间状态，不应该用这个方法不做持久化操作。</p>
+<h5 id="onRestoreInstanceState方法的恢复数据状态"><a href="#onRestoreInstanceState方法的恢复数据状态" class="headerlink" title="onRestoreInstanceState方法的恢复数据状态"></a>onRestoreInstanceState方法的恢复数据状态</h5><p>1 需要注意的是onSaveInstanceState<br>onRestoreInstanceState不一定是成双的；<br>2 onRestoreInstanceState执行条件是在此Activity的确被销毁了；<br>3 onSaveInstanceState中的Bundle也会传递到onCreate中,所以也可以选择在onCreate中恢复数据；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">protected void onSaveInstanceState(Bundle outState) &#123;</div><div class="line">       super.onSaveInstanceState(outState);</div><div class="line">       outState.putString(&quot;anAnt&quot;,&quot;Android&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h5 id="Activity的四中启动模式"><a href="#Activity的四中启动模式" class="headerlink" title="Activity的四中启动模式"></a>Activity的四中启动模式</h5><p>使用android:launchMode=”standard|singleInstance|singleTask|singleTop”来控制Acivity任务栈。</p>
+<ul>
+<li>standard为默认启动模式，如果不指定其他模式则都会使用此模式启动，每次都会创建一个新的Activcity，并且将其置于任务栈的栈顶，而不管这个Activity是否创建，并且执行三回调（onCreate-&gt;onStart-&gt;onResume）</li>
+<li>singleTop为栈顶复用模式，系统判断你要启动的Activity是否位于栈顶，如果位于栈顶则直接使用，所以他的启动三回调不会执行，但是Activity的onNewIntent的方法会执行，如果Activity已存在不位于栈顶则和Standard模式一样。</li>
+<li>singleTask为栈内复用模式，singleTop判断顶栈元素是否是启动的Activity，而singleTask则判断栈内是否存在Activity，如果存在则至于栈顶，并且执行onNewIntent方法，以及会清理在当前Activity上面的所有Activity;</li>
+<li>singleInstance:为加强版的singleTask模式，这种模式类似使用浏览器，在多个程序中访问浏览器时，如果当前浏览器没有打开则先打开浏览器，否则直接在浏览器中访问，Activcity只能单独位于任务栈内，由于栈内复用的特性，所以后续的请求都不会创建新的Activity，除非这个独特的任务栈被系统销毁。</li>
+</ul>
+<h3 id="Service必须了解的知识点"><a href="#Service必须了解的知识点" class="headerlink" title="Service必须了解的知识点"></a>Service必须了解的知识点</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">public void startService()&#123;</div><div class="line">       //启动一个Service</div><div class="line">       Intent intent=new Intent(this,Service.class);</div><div class="line">       startService(intent);</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public void startService()&#123;</div><div class="line">      Intent intent=new Intent(this, Service.class);</div><div class="line">      bindService(intent, new ServiceConnection() &#123;</div><div class="line">          @Override</div><div class="line">          public void onServiceConnected(ComponentName name, IBinder service) &#123;&#125;</div><div class="line">          @Override</div><div class="line">          public void onServiceDisconnected(ComponentName name) &#123;&#125;</div><div class="line">      &#125;,BIND_AUTO_CREATE);</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p>上面是Service的两种启动方式</p>
+<h6 id="Activity相比，service的生命周期已经简单的不能再简单了"><a href="#Activity相比，service的生命周期已经简单的不能再简单了" class="headerlink" title="Activity相比，service的生命周期已经简单的不能再简单了"></a>Activity相比，service的生命周期已经简单的不能再简单了</h6><p>只有onCreate()-&gt;onStart()-&gt;onDestroy()三个方法。<br>  Activity中和service有关的方法：        </p>
+<ul>
+<li>startService(Intent intent)：启动一个service        </li>
+<li>stopService(Intent intent) :停止一个service    </li>
+</ul>
+<p>如果我们想使用service中的一些数据或者访问其中的一些方法，那么我们就要通过下面的方法：</p>
+<ul>
+<li>public boolean bindService(Intent intent, ServiceConnection conn, int flags) ；        </li>
+<li>public void unbindService(ServiceConnection conn); </li>
+</ul>
+<p>上面startService()和bindService()两种模式是完全独立的。你可以绑定一个已经通过startService()方法启动的服务<br>只要调用一次stopService()方法便可以停止服务，无论之前它被调用了多少次的启动服务方法</p>
+<p>######注意：Service的onCreate的方法只会被调用一次，就是你无论多少次的startService又 bindService，Service只被创建一次。如果先是bind了，那么start的时候就直接运行Service的onStart方法，如果先是start，那么bind的时候就直接运行onBind方法。如果你先bind上了，就stop不掉了，只能先UnbindService, 再StopService,所以是先start还是先bind行为是有区别的。</p>
+<h4 id="IntentService的使用"><a href="#IntentService的使用" class="headerlink" title="IntentService的使用"></a>IntentService的使用</h4><p>因为Service默认都是在主线程中使用，所以如果在服务里处理一些耗时操作很容易出现ARN的情况<br>这个时候就可以用到IntentService，而且当IntentService执行完毕后会自动停止。</p>
+<p>###Service怎么避免被杀毒软件杀掉和系统回收<br>1 Service设置为START_STICKY,Kill后会被重启，重传Intent，保证和重启前一样。<br>2 提升Service的优先级，在AndroidManifaster.xml中android:priority=”1000”。<br>3 当Service销毁时发送个广播来重启Service<br>4 双进程守护<br>5 开启一个一像素的Activity在前台。<br>6 android的系统进程分为五个等级, Foreground Process(前台进程), Visible Process(可见进程), Service Process(服务进程), Background Process(后台进程), Empty Process(空进程), Service的进程处于第三个位置. 系统的回收会从低到高依次回收, 所以我们必须提高Service的等级；<br>仔细看Service的API会发现这么个方法 <a href="https://zhidao.baidu.com/question/986920772385515139" target="_blank" rel="external">参考链接</a></p>
+<ul>
+<li>public final void startForeground (int id, Notification notification)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public class MyService extends Service &#123;</div><div class="line">    private void startForegroundCompat() &#123;</div><div class="line">        try &#123;</div><div class="line">            if (Build.VERSION.SDK_INT &lt; 18) &#123;</div><div class="line">                Log.e(TAG, &quot;startForgroundCompat&quot;);</div><div class="line">                startForeground(1120, new Notification());</div><div class="line">            &#125;</div><div class="line">        &#125; catch (Exception e) &#123;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>如果这样做之后, 你会发现一键清理对你的Service是完全不起作用的。</p>
+<h3 id="BroadcastReceive广播接收器"><a href="#BroadcastReceive广播接收器" class="headerlink" title="BroadcastReceive广播接收器"></a>BroadcastReceive广播接收器</h3><p>标准广播：是一个完全异步的广播，在广播发出后，所有的广播接收器机会都会在同一时刻收到这条广播消息，因此他们之间没有任何先后顺序而言。<br>有序广播：是一个同步执行广播，在 广播发出后，同一时刻只会有一个接收器接收到此广播，并且当广播接收器接收执行完毕后，广播才会继续传播，所以 他们是有先后顺序的，优先级越高则先收到广播，并且这样的广播接受者可以截断正在传播的 广播，这样后面的广播接受者就无法接收到广播了。<br>发送标准广播和有序广播只要改动一行代码 sendBroadcast()改成sendOrderBroadCast()</p>
+<p>######广播的使用</p>
+<ul>
+<li>动态注册广播<br>  registerReceiver(mBroadcastReceive,null);<br>  unregisterReceiver(mBroadcastReceive);</li>
+<li>静态注册广播</li>
+</ul>
+<p>1 Service的两种启动方法，有什么区别 1.在Context中通过public boolean bindService(Intent service,ServiceConnection conn,int flags) 方法来进行Service与Context的关联并启动，并且Service的生命周期依附于Context(不求同时同分同秒生！但求同时同分同秒屎！！)。<br>2  通过public ComponentName startService(Intent service)方法去启动一个Service，此时Service的生命周期与启动它的Context无关。<br>在AndroidManifaster中注册广播</p>
+<h6 id="本地广播"><a href="#本地广播" class="headerlink" title="本地广播"></a>本地广播</h6><p>前面得广播数据系统全局广播，如果你发的 广播只想本程序收到那么久可以使用本地广播<br>开启本地广播只需要得到本地广播管理器来发送和注册广播就可以LocalBoradCastManager</p>
+<ul>
+<li>mLocalBroadcastManager.registerReceiver(mBroadcastReceive,null);</li>
+<li>mLocalBroadcastManager.unregisterReceiver(mBroadcastReceive);</li>
+</ul>
+<h3 id="contentProvider内容提供者，跨程序数据共享-。"><a href="#contentProvider内容提供者，跨程序数据共享-。" class="headerlink" title="contentProvider内容提供者，跨程序数据共享 。"></a>contentProvider内容提供者，跨程序数据共享 。</h3><p>一个程序通过ContentProvider抽象接口将自己的数据提供了外部访问的接口，而且是以类似数据库中表的方式暴露出去。ContentProviders存储与检索数据，任何其他应用程序都可以对这部分数据进行访问。<br>1 创建自己的ContentProvider继承ContentProvider<br>2  在AndroidManifaster中注册自己 的ContenetProviders<br>3  通过设置 URL让CotentPorvider内部做类似数据库的响应操作<br>最后我们就可以更具此URL来实现数据的访问操作</p>
+<h3 id="解析XML的几种方式的原理和特点：DOM-SAX-PULL"><a href="#解析XML的几种方式的原理和特点：DOM-SAX-PULL" class="headerlink" title="解析XML的几种方式的原理和特点：DOM,SAX,PULL"></a>解析XML的几种方式的原理和特点：DOM,SAX,PULL</h3><p>DOM:消耗内存，先把xml文件读取到内存中，然后再用DOM API来访问树形结构，这个写起来很简单，但是消耗内存较大。<br>要是数据过大，手机不够牛逼，可以导致手机直接死机。</p>
+<p>SAX:解析效率高，占内存少，基于事件驱动，更简单的说就是对文档进行顺序扫描，当扫面到的文档（doucument）开始和结束，元素<br>（element）开始和结束，文档（document）结束等地方通知事件处理函数，由事件处理函数做相应动作，然后继续同样的扫描，直到文档结束。</p>
+<p>PULL：与SAX类似，也是基于事件驱动，我们可以调用他的next()方法，来获取下一个解析事件（就是开始文档，结束文档，开始标签，结束标签）<br>当处于某个元素时可以调用XmlPullParser的getAttributte()方法来获取属性的値，也可以调用他的nextText()获取本节点的値。</p>
+</the>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>Title:</span><a href="/2016/12/07/Android面试/">Android面试</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">Mr●Yang</a></p>
+        <p><span>Created:</span>2016-12-07, 15:29:30</p>
+        <p><span>Updated:</span>2017-02-14, 09:01:21</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/2016/12/07/Android面试/" title="Android面试">https://gyymz1993.github.io/2016/12/07/Android面试/</a>
+            <span class="copy-path" data-clipboard-text="From https://gyymz1993.github.io/2016/12/07/Android面试/　　By Mr●Yang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2016/12/09/MarkDowGrammar/">
+                    手把手教你MarkDown写作
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/12/07/Hexo/">
+                    熟悉Hexo
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Please-read-happily"><span class="toc-number">1.</span> <span class="toc-text">Please read happily</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#经典中的经典四大组件"><span class="toc-number">2.</span> <span class="toc-text">经典中的经典四大组件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Activity必须要了解的知识点"><span class="toc-number">2.1.</span> <span class="toc-text">Activity必须要了解的知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#当我们启动一个Activity执行流程"><span class="toc-number">2.1.0.0.1.</span> <span class="toc-text">当我们启动一个Activity执行流程</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Activity退居后台-当我们点击返回后执行流程"><span class="toc-number">2.1.0.0.2.</span> <span class="toc-text">Activity退居后台:当我们点击返回后执行流程</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Activity退居后台-当我们点击Home后执行流程或者跳转新的Activity"><span class="toc-number">2.1.0.0.3.</span> <span class="toc-text">Activity退居后台:当我们点击Home后执行流程或者跳转新的Activity</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Activity返回前台-当我们点击Home后再次进入Activity"><span class="toc-number">2.1.0.0.4.</span> <span class="toc-text">Activity返回前台:当我们点击Home后再次进入Activity</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#锁屏-onPause-gt-Stop"><span class="toc-number">2.1.0.0.5.</span> <span class="toc-text">锁屏:onPause->Stop</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#解锁-onReStart-gt-onStart-gt-onResume"><span class="toc-number">2.1.0.0.6.</span> <span class="toc-text">解锁 :onReStart->onStart->onResume</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#理解清楚整个生命周期中只有三个状态是稳定的，其他都是属于过渡状态很重要。"><span class="toc-number">2.1.0.0.7.</span> <span class="toc-text">理解清楚整个生命周期中只有三个状态是稳定的，其他都是属于过渡状态很重要。</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Activity中缓存方法以及数据恢复机制"><span class="toc-number">2.1.0.1.</span> <span class="toc-text">Activity中缓存方法以及数据恢复机制</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#onRestoreInstanceState方法的恢复数据状态"><span class="toc-number">2.1.0.2.</span> <span class="toc-text">onRestoreInstanceState方法的恢复数据状态</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Activity的四中启动模式"><span class="toc-number">2.1.0.3.</span> <span class="toc-text">Activity的四中启动模式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Service必须了解的知识点"><span class="toc-number">2.2.</span> <span class="toc-text">Service必须了解的知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#Activity相比，service的生命周期已经简单的不能再简单了"><span class="toc-number">2.2.0.0.1.</span> <span class="toc-text">Activity相比，service的生命周期已经简单的不能再简单了</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IntentService的使用"><span class="toc-number">2.2.1.</span> <span class="toc-text">IntentService的使用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BroadcastReceive广播接收器"><span class="toc-number">2.3.</span> <span class="toc-text">BroadcastReceive广播接收器</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#本地广播"><span class="toc-number">2.3.0.0.1.</span> <span class="toc-text">本地广播</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#contentProvider内容提供者，跨程序数据共享-。"><span class="toc-number">2.4.</span> <span class="toc-text">contentProvider内容提供者，跨程序数据共享 。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解析XML的几种方式的原理和特点：DOM-SAX-PULL"><span class="toc-number">2.5.</span> <span class="toc-text">解析XML的几种方式的原理和特点：DOM,SAX,PULL</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+    <script>
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"Android面试　| 择高处立，向宽处行　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/12/07/Android面试/" data-title="Android面试" data-url="https://gyymz1993.github.io/2016/12/07/Android面试/"></div>
+    <script>
+        var duoshuoQuery = {short_name:"gyymz1993"};
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+		$(function() {
+			var ds = document.createElement('script');
+			ds.type = 'text/javascript';ds.async = true;
+			ds.src = 'https://gyymz1993.github.io/js/embed.js';
+			/*上面是我自己的 embed.js 链接，请改为你自己的地址*/
+			ds.charset = 'UTF-8';
+			(document.getElementsByTagName('head')[0] 
+			|| document.getElementsByTagName('body')[0]).appendChild(ds);
+		})();
+		
+		
+        
+            // Add comment count
+            $(function(){ 
+                var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=gyymz1993&threads=2016/12/07/Android面试/&callback=?";
+                $.getJSON(jsonUrl, function(result){
+                    $.each(result.response, function(i, field){
+                        var value = field.comments;
+                        if (value > 0) {
+                            $(".count-comment").text(value);
+                            return;
+                        }
+                    })
+                })
+            })
+        
+    </script>
+    
+    <aside class="comment-bar">
+        <a href="javascript:void(0);">
+            <i class="fa fa-commenting-o animated infinite pulse"></i>
+            <i class="fa fa-spinner fa-pulse"></i>
+            <span class="count-comment"></span>
+        </a>
+    </aside>
+    <script>
+        var $commentBar = $("#comments aside.comment-bar");
+        var load$hide = function(){
+            $commentBar.find("a > i").toggle();
+            loadComment();
+            $commentBar.fadeOut(800);
+        }
+        $commentBar.click(function(){
+            load$hide();
+        })
+        $commentBar.children("a").hover(function(){
+            load$hide();
+        })
+        if (window.location.hash === "#comments") {
+            load$hide();
+        }
+    </script>
+
+</div>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/12/09/MarkDowGrammar/" title="Pre: 手把手教你MarkDown写作">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/12/07/Hexo/" title="Next: 熟悉Hexo">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/12/21/Svn/">开发之Svn安装使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/12/Git/">手把手教你Git安装、配置和使用以及博客搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/09/MarkDowGrammar/">手把手教你MarkDown写作</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/07/Android面试/">Android面试</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/07/Hexo/">熟悉Hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/07/我的gitHub之旅/">我的gitHub之旅</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/07/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2017 Mr●Yang
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+    <script src="/js/GithubRepoWidget.js"></script>
+
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+             github: ".github-widget a", 
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "你不爱我了(つェ⊂)" + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "终于看我了(*´∇｀*)" + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
