@@ -133,11 +133,11 @@
     </summary>
     
     
-      <category term="hexo" scheme="https://gyymz1993.github.io/tags/hexo/"/>
-    
       <category term="git" scheme="https://gyymz1993.github.io/tags/git/"/>
     
       <category term="gitHub" scheme="https://gyymz1993.github.io/tags/gitHub/"/>
+    
+      <category term="hexo" scheme="https://gyymz1993.github.io/tags/hexo/"/>
     
   </entry>
   
@@ -193,17 +193,13 @@
     <link href="https://gyymz1993.github.io/2016/12/07/Android%E9%9D%A2%E8%AF%95/"/>
     <id>https://gyymz1993.github.io/2016/12/07/Android面试/</id>
     <published>2016-12-07T07:29:30.000Z</published>
-    <updated>2017-02-14T01:01:21.979Z</updated>
+    <updated>2017-02-14T01:07:46.795Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎我的博客，我会为你们奉献更多的干货，感谢大家的支持</p>
 <h2 id="Please-read-happily"><a href="#Please-read-happily" class="headerlink" title="Please read happily"></a>Please read happily</h2><a id="more"></a>
 <the rest="" of="" contents="" |="" 余下全文="">
 
-<p>分类和标签<br>categories:</p>
-<ul>
-<li>Android<br>tags:</li>
-<li>面试</li>
-</ul>
+
 <h2 id="经典中的经典四大组件"><a href="#经典中的经典四大组件" class="headerlink" title="经典中的经典四大组件"></a>经典中的经典四大组件</h2><p>1 Activity<br>2 Service<br>3 BroadCastRevceiver<br>4 ContentProviders</p>
 <h3 id="Activity必须要了解的知识点"><a href="#Activity必须要了解的知识点" class="headerlink" title="Activity必须要了解的知识点"></a>Activity必须要了解的知识点</h3><p>Activity的生命周期？<br><img src="http://upload-images.jianshu.io/upload_images/433829-b32d2883fc674dd0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 <h6 id="当我们启动一个Activity执行流程"><a href="#当我们启动一个Activity执行流程" class="headerlink" title="当我们启动一个Activity执行流程"></a>当我们启动一个Activity执行流程</h6><p>onCreate-&gt;onStart-&gt;onResume</p>
@@ -273,7 +269,9 @@
     </summary>
     
     
-      <category term="hexo" scheme="https://gyymz1993.github.io/tags/hexo/"/>
+      <category term="面试" scheme="https://gyymz1993.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="Android" scheme="https://gyymz1993.github.io/tags/Android/"/>
     
   </entry>
   
