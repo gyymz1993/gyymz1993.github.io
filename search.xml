@@ -81,6 +81,8 @@
 <h3 id="commit"><a href="#commit" class="headerlink" title="commit"></a>commit</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  git commit -m &quot;first commit&quot;</div></pre></td></tr></table></figure>
 <h3 id="你的gitHub项目的SSH路径"><a href="#你的gitHub项目的SSH路径" class="headerlink" title="你的gitHub项目的SSH路径"></a>你的gitHub项目的SSH路径</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  git remote add origin git@github.com:yourname/XXX.git</div></pre></td></tr></table></figure>
 <h3 id="最后一步就是提交了"><a href="#最后一步就是提交了" class="headerlink" title="最后一步就是提交了"></a>最后一步就是提交了</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  git push -u origin master</div></pre></td></tr></table></figure>
+<h3 id="今天提交遇见这种错误"><a href="#今天提交遇见这种错误" class="headerlink" title="今天提交遇见这种错误"></a>今天提交遇见这种错误</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ git push -u origin master</div><div class="line">Counting objects: 159, done.</div><div class="line">Delta compression using up to 4 threads.</div><div class="line">Compressing objects: 100% (150/150), done.</div><div class="line">Writing objects: 100% (159/159), 521.63 KiB | 0 bytes/s, done.</div><div class="line">Total 159 (delta 3), reused 0 (delta 0)</div><div class="line">packet_write_wait: Connection to 192.30.253.112 port 22: Broken pipe</div><div class="line">fatal: The remote end hung up unexpectedly</div><div class="line">fatal: The remote end hung up unexpectedly</div></pre></td></tr></table></figure>
+<h3 id="可能是文件过大造成的解决办法"><a href="#可能是文件过大造成的解决办法" class="headerlink" title="可能是文件过大造成的解决办法"></a>可能是文件过大造成的解决办法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">$ git config http.postBuffer 524288000</div><div class="line">Administrator@2011-20151010QW MINGW64 /d/Git/Hexo1 (master)</div><div class="line">$ git push -u origin master</div><div class="line">Counting objects: 159, done.</div><div class="line">Delta compression using up to 4 threads.</div><div class="line">Compressing objects: 100% (150/150), done.</div><div class="line">Writing objects: 100% (159/159), 521.63 KiB | 0 bytes/s, done.</div><div class="line">Total 159 (delta 3), reused 0 (delta 0)</div><div class="line">remote: Resolving deltas: 100% (3/3), done.</div><div class="line">To github.com:gyymz1993/GitHubHexo.git</div><div class="line"> * [new branch]      master -&gt; master</div><div class="line">Branch master set up to track remote branch master from origin.</div></pre></td></tr></table></figure>
 <h3 id="当你修改你的项目提交"><a href="#当你修改你的项目提交" class="headerlink" title="当你修改你的项目提交"></a>当你修改你的项目提交</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$  git add . </div><div class="line">$  git commit -m &apos;update&apos;</div><div class="line">$  git push</div></pre></td></tr></table></figure>
 <h3 id="当你本地删除文件后需要拉取GitHub文件执行，意思是还原和服务器同步"><a href="#当你本地删除文件后需要拉取GitHub文件执行，意思是还原和服务器同步" class="headerlink" title="当你本地删除文件后需要拉取GitHub文件执行，意思是还原和服务器同步"></a>当你本地删除文件后需要拉取GitHub文件执行，意思是还原和服务器同步</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  git checkout .</div></pre></td></tr></table></figure>
 <h3 id="当你在gitHub服务修改文件后必须pull才能修改到本地"><a href="#当你在gitHub服务修改文件后必须pull才能修改到本地" class="headerlink" title="当你在gitHub服务修改文件后必须pull才能修改到本地"></a>当你在gitHub服务修改文件后必须pull才能修改到本地</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  git pull</div></pre></td></tr></table></figure>
@@ -139,31 +141,6 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$  语法：</div><div class="line">	```html</div><div class="line">	&lt;!-- 这是代码中注释  --&gt;</div><div class="line">	&lt;span class=<span class="string">"duoshuo-count  2da7cc"</span>&gt;&lt;/span&gt;</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">### Github为文章增加多个json</div><div class="line">```json</div><div class="line">&#123;</div><div class="line">    &quot;data&quot;: &#123;</div><div class="line">        &quot;message&quot;: &quot;json&quot;,</div><div class="line">    &#125;,</div><div class="line">    &quot;erroe&quot;: &quot;0&quot;,</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$  语法：</div><div class="line">	```json</div><div class="line">&#123;</div><div class="line">    <span class="string">"data"</span>: &#123;</div><div class="line">        <span class="string">"message"</span>: <span class="string">"json"</span>,</div><div class="line">    &#125;,</div><div class="line">    <span class="string">"erroe"</span>: <span class="string">"0"</span>,</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</the>]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[熟悉Hexo]]></title>
-      <url>https://gyymz1993.github.io/2016/12/07/Hexo/</url>
-      <content type="html"><![CDATA[<p>欢迎我的博客，我会为你们奉献更多的干货，感谢大家的支持</p>
-<h2 id="Please-read-happily"><a href="#Please-read-happily" class="headerlink" title="Please read happily"></a>Please read happily</h2><a id="more"></a>
-<the rest="" of="" contents="" |="" 余下全文="">
-
-<p>分类和标签<br>categories:</p>
-<ul>
-<li>Diary<br>tags:</li>
-<li>PS3</li>
-<li>Games</li>
-</ul>
-<p>引用块<br>在文章中插入引言，可包含作者、来源和标题。</p>
-<p>别号： quote</p>
-<p>‘<blockquote><p>’<br>content<br>‘</p>
-<footer><strong>[author[</strong><cite>source]] [link] [source_link_title]</cite></footer></blockquote>’</p>
-<p>代码块<br>在文章中插入代码。<br>别名： code<br>‘<figure class="highlight plain"><figcaption><span>[title] [] [url] [link text]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">‘</div><div class="line">code snippet</div><div class="line">’</div></pre></td></tr></table></figure>’</p>
-<p>Image<br>在文章中插入指定大小的图片。<br>‘<img src="/path/to/image" class="[class names]" title="[width] [height] [title text [alt text]]">’</p>
-<p>Link<br>在文章中插入链接，并自动给外部链接添加 target=”_blank” 属性。<br>’<a>text url [external] [title]</a>‘</p>
-<p>Vimeo<br>在文章中插入 Vimeo 视频。<br>‘<div class="video-container"><iframe src="//player.vimeo.com/video/video_id" frameborder="0" allowfullscreen></iframe></div>’</p>
-<p>引用文章<br>引用其他文章的链接。<br>‘’<br>‘’</p>
 </the>]]></content>
     </entry>
     
@@ -234,6 +211,31 @@
 <h3 id="解析XML的几种方式的原理和特点：DOM-SAX-PULL"><a href="#解析XML的几种方式的原理和特点：DOM-SAX-PULL" class="headerlink" title="解析XML的几种方式的原理和特点：DOM,SAX,PULL"></a>解析XML的几种方式的原理和特点：DOM,SAX,PULL</h3><p>DOM:消耗内存，先把xml文件读取到内存中，然后再用DOM API来访问树形结构，这个写起来很简单，但是消耗内存较大。<br>要是数据过大，手机不够牛逼，可以导致手机直接死机。</p>
 <p>SAX:解析效率高，占内存少，基于事件驱动，更简单的说就是对文档进行顺序扫描，当扫面到的文档（doucument）开始和结束，元素<br>（element）开始和结束，文档（document）结束等地方通知事件处理函数，由事件处理函数做相应动作，然后继续同样的扫描，直到文档结束。</p>
 <p>PULL：与SAX类似，也是基于事件驱动，我们可以调用他的next()方法，来获取下一个解析事件（就是开始文档，结束文档，开始标签，结束标签）<br>当处于某个元素时可以调用XmlPullParser的getAttributte()方法来获取属性的値，也可以调用他的nextText()获取本节点的値。</p>
+</the>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[熟悉Hexo]]></title>
+      <url>https://gyymz1993.github.io/2016/12/07/Hexo/</url>
+      <content type="html"><![CDATA[<p>欢迎我的博客，我会为你们奉献更多的干货，感谢大家的支持</p>
+<h2 id="Please-read-happily"><a href="#Please-read-happily" class="headerlink" title="Please read happily"></a>Please read happily</h2><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<p>分类和标签<br>categories:</p>
+<ul>
+<li>Diary<br>tags:</li>
+<li>PS3</li>
+<li>Games</li>
+</ul>
+<p>引用块<br>在文章中插入引言，可包含作者、来源和标题。</p>
+<p>别号： quote</p>
+<p>‘<blockquote><p>’<br>content<br>‘</p>
+<footer><strong>[author[</strong><cite>source]] [link] [source_link_title]</cite></footer></blockquote>’</p>
+<p>代码块<br>在文章中插入代码。<br>别名： code<br>‘<figure class="highlight plain"><figcaption><span>[title] [] [url] [link text]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">‘</div><div class="line">code snippet</div><div class="line">’</div></pre></td></tr></table></figure>’</p>
+<p>Image<br>在文章中插入指定大小的图片。<br>‘<img src="/path/to/image" class="[class names]" title="[width] [height] [title text [alt text]]">’</p>
+<p>Link<br>在文章中插入链接，并自动给外部链接添加 target=”_blank” 属性。<br>’<a>text url [external] [title]</a>‘</p>
+<p>Vimeo<br>在文章中插入 Vimeo 视频。<br>‘<div class="video-container"><iframe src="//player.vimeo.com/video/video_id" frameborder="0" allowfullscreen></iframe></div>’</p>
+<p>引用文章<br>引用其他文章的链接。<br>‘’<br>‘’</p>
 </the>]]></content>
     </entry>
     
