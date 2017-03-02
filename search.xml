@@ -4,6 +4,24 @@
   
     
     <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>https://gyymz1993.github.io/2017/03/02/hello-world/</url>
+      <content type="html"><![CDATA[<p>欢迎我的小博，我正在努力学习，我会在不久将来给你们分享更多的干货，希望你们喜欢。</p>
+<h2 id="Please-read-happily"><a href="#Please-read-happily" class="headerlink" title="Please read happily"></a>Please read happily</h2><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+</the>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[开发之Svn安装使用]]></title>
       <url>https://gyymz1993.github.io/2016/12/21/Svn/</url>
       <content type="html"><![CDATA[<p>欢迎我的小博，我正在努力学习，我会在不久将来给你们分享更多的干货，希望你们喜欢。</p>
@@ -224,24 +242,6 @@
 <the rest="" of="" contents="" |="" 余下全文="">
 
 <h3 id="参照文档-Hexo-Yelee"><a href="#参照文档-Hexo-Yelee" class="headerlink" title="参照文档 Hexo_Yelee"></a>参照文档 <a href="http://moxfive.coding.me/yelee/" target="_blank" rel="external">Hexo_Yelee</a></h3><h3 id="学习Hexo写作教程-Hexo"><a href="#学习Hexo写作教程-Hexo" class="headerlink" title="学习Hexo写作教程 Hexo"></a>学习Hexo写作教程 <a href="https://hexo.io/zh-cn/docs/tag-plugins.html" target="_blank" rel="external">Hexo</a></h3><h3 id="GitHub博客中-config-yml配置"><a href="#GitHub博客中-config-yml配置" class="headerlink" title="GitHub博客中_config_yml配置"></a>GitHub博客中<a href="http://blog.csdn.net/willxue123/article/details/50994852" target="_blank" rel="external">_config_yml配置</a></h3><div class="player"><br><bgsound src=" http://sc.111ttt.com/up/mp3/270082/ECC6F3E7533F610DBB0AFCEF30E2EB83.mp3" loop="-1"><br></bgsound></div>
-</the>]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Hello World]]></title>
-      <url>https://gyymz1993.github.io/2016/12/07/hello-world/</url>
-      <content type="html"><![CDATA[<p>欢迎我的小博，我正在努力学习，我会在不久将来给你们分享更多的干货，希望你们喜欢。</p>
-<h2 id="Please-read-happily"><a href="#Please-read-happily" class="headerlink" title="Please read happily"></a>Please read happily</h2><a id="more"></a>
-<the rest="" of="" contents="" |="" 余下全文="">
-
-<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 </the>]]></content>
     </entry>
     

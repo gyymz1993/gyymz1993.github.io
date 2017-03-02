@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gyymz1993.github.io/"/>
-  <updated>2016-12-21T09:07:17.838Z</updated>
+  <updated>2016-12-09T03:54:43.062Z</updated>
   <id>https://gyymz1993.github.io/</id>
   
   <author>
@@ -14,6 +14,47 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://gyymz1993.github.io/2017/03/02/hello-world/"/>
+    <id>https://gyymz1993.github.io/2017/03/02/hello-world/</id>
+    <published>2017-03-02T09:54:48.654Z</published>
+    <updated>2016-12-09T03:54:43.062Z</updated>
+    
+    <content type="html"><![CDATA[<p>欢迎我的小博，我正在努力学习，我会在不久将来给你们分享更多的干货，希望你们喜欢。</p>
+<h2 id="Please-read-happily"><a href="#Please-read-happily" class="headerlink" title="Please read happily"></a>Please read happily</h2><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+</the>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;欢迎我的小博，我正在努力学习，我会在不久将来给你们分享更多的干货，希望你们喜欢。&lt;/p&gt;
+&lt;h2 id=&quot;Please-read-happily&quot;&gt;&lt;a href=&quot;#Please-read-happily&quot; class=&quot;headerlink&quot; title=&quot;Please read happily&quot;&gt;&lt;/a&gt;Please read happily&lt;/h2&gt;
+    
+    </summary>
+    
+      <category term="Sports" scheme="https://gyymz1993.github.io/categories/Sports/"/>
+    
+      <category term="Baseball" scheme="https://gyymz1993.github.io/categories/Sports/Baseball/"/>
+    
+    
+      <category term="Injury" scheme="https://gyymz1993.github.io/tags/Injury/"/>
+    
+      <category term="Fight" scheme="https://gyymz1993.github.io/tags/Fight/"/>
+    
+      <category term="Shocking" scheme="https://gyymz1993.github.io/tags/Shocking/"/>
+    
+  </entry>
   
   <entry>
     <title>开发之Svn安装使用</title>
@@ -338,47 +379,6 @@
     
     
       <category term="github hexo" scheme="https://gyymz1993.github.io/tags/github-hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://gyymz1993.github.io/2016/12/07/hello-world/"/>
-    <id>https://gyymz1993.github.io/2016/12/07/hello-world/</id>
-    <published>2016-12-07T04:40:09.319Z</published>
-    <updated>2016-12-09T03:54:43.062Z</updated>
-    
-    <content type="html"><![CDATA[<p>欢迎我的小博，我正在努力学习，我会在不久将来给你们分享更多的干货，希望你们喜欢。</p>
-<h2 id="Please-read-happily"><a href="#Please-read-happily" class="headerlink" title="Please read happily"></a>Please read happily</h2><a id="more"></a>
-<the rest="" of="" contents="" |="" 余下全文="">
-
-<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-</the>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;欢迎我的小博，我正在努力学习，我会在不久将来给你们分享更多的干货，希望你们喜欢。&lt;/p&gt;
-&lt;h2 id=&quot;Please-read-happily&quot;&gt;&lt;a href=&quot;#Please-read-happily&quot; class=&quot;headerlink&quot; title=&quot;Please read happily&quot;&gt;&lt;/a&gt;Please read happily&lt;/h2&gt;
-    
-    </summary>
-    
-      <category term="Sports" scheme="https://gyymz1993.github.io/categories/Sports/"/>
-    
-      <category term="Baseball" scheme="https://gyymz1993.github.io/categories/Sports/Baseball/"/>
-    
-    
-      <category term="Injury" scheme="https://gyymz1993.github.io/tags/Injury/"/>
-    
-      <category term="Fight" scheme="https://gyymz1993.github.io/tags/Fight/"/>
-    
-      <category term="Shocking" scheme="https://gyymz1993.github.io/tags/Shocking/"/>
     
   </entry>
   
