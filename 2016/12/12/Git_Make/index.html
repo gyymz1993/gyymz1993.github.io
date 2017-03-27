@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Mr●Yang" />
+
+
+
+<meta name="description" content="欢迎我的小博，我正在努力学习，我会在不久将来给你们分享更多的干货，希望你们喜欢。
+Please read happily">
+<meta property="og:type" content="article">
+<meta property="og:title" content="手把手教你Git安装、配置和使用以及博客搭建">
+<meta property="og:url" content="https://gyymz1993.github.io/2016/12/12/Git_Make/index.html">
+<meta property="og:site_name" content="择高处立，向宽处行">
+<meta property="og:description" content="欢迎我的小博，我正在努力学习，我会在不久将来给你们分享更多的干货，希望你们喜欢。
+Please read happily">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/433829-b5b729f1b3dbfe38.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-03-02T10:32:18.315Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="手把手教你Git安装、配置和使用以及博客搭建">
+<meta name="twitter:description" content="欢迎我的小博，我正在努力学习，我会在不久将来给你们分享更多的干货，希望你们喜欢。
+Please read happily">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/433829-b5b729f1b3dbfe38.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="择高处立，向宽处行" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/img/yang.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>手把手教你Git安装、配置和使用以及博客搭建 | 择高处立，向宽处行</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58d88f1415548994"></script>
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/yang.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Mr●Yang</a></h1>
+        </hgroup>
+
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>Menu</li>
+                        <li>Tags</li>
+                        
+                        <li>Friends</li>
+                        
+                        
+                        <li>About Me</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="/gyymz1993@126.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" href="http://www.weibo.com/gyymz1993/home?topnav=1&wvr=6" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/gyymz1993" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa 知乎" href="https://www.zhihu.com/people/yang-shao-83-77/activities" title="知乎"></a>
+                            
+                                <a class="fa 简书" href="http://www.jianshu.com/users/64205f9b4145/timeline" title="简书"></a>
+                            
+                                <a class="fa CSDN" href="http://blog.csdn.net/gyymz1992" title="CSDN"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Subversion/">Subversion</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TortoiseSVN/">TortoiseSVN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VisualSVN/">VisualSVN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gitHub/">gitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github-hexo/">github hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mardown/">mardown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svn/">svn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试/">面试</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">Android工程师</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Mr●Yang</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/yang.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Mr●Yang</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="/gyymz1993@126.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="http://www.weibo.com/gyymz1993/home?topnav=1&wvr=6" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/gyymz1993" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/yang-shao-83-77/activities" title="知乎"></a>
+                            
+                                <a class="fa 简书" target="_blank" href="http://www.jianshu.com/users/64205f9b4145/timeline" title="简书"></a>
+                            
+                                <a class="fa CSDN" target="_blank" href="http://blog.csdn.net/gyymz1992" title="CSDN"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+</nav>
+      <div class="body-wrap"><article id="post-Git_Make" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/12/Git_Make/" class="article-date">
+      <time datetime="2016-12-12T07:28:38.000Z" itemprop="datePublished">2016-12-12</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      手把手教你Git安装、配置和使用以及博客搭建
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gitHub/">gitHub</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>欢迎我的小博，我正在努力学习，我会在不久将来给你们分享更多的干货，希望你们喜欢。</p>
+<h2 id="Please-read-happily"><a href="#Please-read-happily" class="headerlink" title="Please read happily"></a>Please read happily</h2><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文="">
+
+
+<h3 id="需要用到的工具"><a href="#需要用到的工具" class="headerlink" title="需要用到的工具"></a>需要用到的工具</h3><p><img src="http://upload-images.jianshu.io/upload_images/433829-b5b729f1b3dbfe38.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="git.exe"></p>
+<h3 id="安装Git只需要一直next就可以"><a href="#安装Git只需要一直next就可以" class="headerlink" title="安装Git只需要一直next就可以"></a>安装Git只需要一直next就可以</h3><p>1 首先去用邮箱注册<a href="https://github.com/" target="_blank" rel="external">GitHub</a>账号<br>2 测试git是否安装成功 启动程序GitBash<br>3 终端配置</p>
+<h2 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h2><p><br></p>
+<h3 id="配置用户名"><a href="#配置用户名" class="headerlink" title="配置用户名"></a>配置用户名</h3><p><code>$ git config --global user.name.你的用户名</code></p>
+<h3 id="配置邮箱"><a href="#配置邮箱" class="headerlink" title="配置邮箱"></a>配置邮箱</h3><p><code>$ git config --global user.email 你的邮箱</code></p>
+<h3 id="保存"><a href="#保存" class="headerlink" title="保存"></a>保存</h3><p><code>$ git config --global alias.ymz(这个随意) commit</code></p>
+<h3 id="设置ssh-这个很重要哦"><a href="#设置ssh-这个很重要哦" class="headerlink" title="设置ssh 这个很重要哦"></a>设置ssh 这个很重要哦</h3><p><code>$ ssh-keygen -c &quot;你的邮箱&quot; -t rsa</code></p>
+<h3 id="查看你的C盘Users-Administrator目录"><a href="#查看你的C盘Users-Administrator目录" class="headerlink" title="查看你的C盘Users/Administrator目录"></a>查看你的C盘Users/Administrator目录</h3><p>1 是否有.ssh文件夹<br>2 文件夹中有id_rsa、id_rsa.pub文件</p>
+<h3 id="强制查看是否关联Github"><a href="#强制查看是否关联Github" class="headerlink" title="强制查看是否关联Github"></a>强制查看是否关联Github</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ ssh -T git@github.com</div><div class="line">The authenticity of host &apos;github.com (192.30.253.113)&apos; can&apos;t be established.</div><div class="line">RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.</div><div class="line">Are you sure you want to continue connecting (yes)? yes</div><div class="line">Warning: Permanently added &apos;github.com,192.30.253.113&apos; (RSA) to the list of known hosts.</div><div class="line">Permission denied (publickey).</div></pre></td></tr></table></figure>
+<p>why?为什么会这样呢？ 因为没有登录GitHub把我们刚刚生成的ssh给设置进去。</p>
+<h3 id="说到这里了，肯定是设置SSH呢"><a href="#说到这里了，肯定是设置SSH呢" class="headerlink" title="说到这里了，肯定是设置SSH呢"></a>说到这里了，肯定是设置SSH呢</h3><p>1 首先进入Git-Setting设置<a href="https://github.com/settings/keys" target="_blank" rel="external">SSH and GPG key</a><br>2 将id_rsa.pub文件用记事本打开将里面所有的内容复制添加到github中的key</p>
+<h3 id="再次查看是否关联Github"><a href="#再次查看是否关联Github" class="headerlink" title="再次查看是否关联Github"></a>再次查看是否关联Github</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ ssh -T git@github.com</div><div class="line">Warning: Permanently added the RSA host key for IP address &apos;192.30.253.112&apos; to the list of known hosts.</div><div class="line">Permission denied (publickey).</div></pre></td></tr></table></figure>
+<h3 id="妈蛋居然提示失败，我发现我复制的时候没有复制完全，纯属意外"><a href="#妈蛋居然提示失败，我发现我复制的时候没有复制完全，纯属意外" class="headerlink" title="妈蛋居然提示失败，我发现我复制的时候没有复制完全，纯属意外"></a>妈蛋居然提示失败，我发现我复制的时候没有复制完全，纯属意外</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$  ssh -T git@github.com</div><div class="line">Hi gyymz1993! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</div></pre></td></tr></table></figure>
+<p>这个提示就表示成功了</p>
+<h3 id="这个命令可以查看出错信息"><a href="#这个命令可以查看出错信息" class="headerlink" title="这个命令可以查看出错信息"></a>这个命令可以查看出错信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  shh -T -v git@github.com</div></pre></td></tr></table></figure>
+<p><br></p>
+<h1 id="现在就是最实用最牛逼得部分了"><a href="#现在就是最实用最牛逼得部分了" class="headerlink" title="现在就是最实用最牛逼得部分了"></a>现在就是最实用最牛逼得部分了</h1><p><br></p>
+<h3 id="提交本地项目步骤"><a href="#提交本地项目步骤" class="headerlink" title="提交本地项目步骤"></a>提交本地项目步骤</h3><p>1 在gitHub新建个项目（这个不会自行百度）<br>2 命令提交</p>
+<h3 id="增加注释文件"><a href="#增加注释文件" class="headerlink" title="增加注释文件"></a>增加注释文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  echo &quot;# MstarStoreApp&quot; &gt;&gt; README.md</div></pre></td></tr></table></figure>
+<p>第一步想当然注释告诉别人这个项目是干嘛的</p>
+<h3 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a>初始化仓库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  git init</div></pre></td></tr></table></figure>
+<h3 id="添加所有文件"><a href="#添加所有文件" class="headerlink" title="添加所有文件"></a>添加所有文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  git add .</div></pre></td></tr></table></figure>
+<h3 id="commit"><a href="#commit" class="headerlink" title="commit"></a>commit</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  git commit -m &quot;first commit&quot;</div></pre></td></tr></table></figure>
+<h3 id="你的gitHub项目的SSH路径"><a href="#你的gitHub项目的SSH路径" class="headerlink" title="你的gitHub项目的SSH路径"></a>你的gitHub项目的SSH路径</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  git remote add origin git@github.com:yourname/XXX.git</div></pre></td></tr></table></figure>
+<h3 id="最后一步就是提交了"><a href="#最后一步就是提交了" class="headerlink" title="最后一步就是提交了"></a>最后一步就是提交了</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  git push -u origin master</div></pre></td></tr></table></figure>
+<h3 id="今天提交遇见这种错误"><a href="#今天提交遇见这种错误" class="headerlink" title="今天提交遇见这种错误"></a>今天提交遇见这种错误</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ git push -u origin master</div><div class="line">Counting objects: 159, done.</div><div class="line">Delta compression using up to 4 threads.</div><div class="line">Compressing objects: 100% (150/150), done.</div><div class="line">Writing objects: 100% (159/159), 521.63 KiB | 0 bytes/s, done.</div><div class="line">Total 159 (delta 3), reused 0 (delta 0)</div><div class="line">packet_write_wait: Connection to 192.30.253.112 port 22: Broken pipe</div><div class="line">fatal: The remote end hung up unexpectedly</div><div class="line">fatal: The remote end hung up unexpectedly</div></pre></td></tr></table></figure>
+<h3 id="可能是文件过大造成的解决办法"><a href="#可能是文件过大造成的解决办法" class="headerlink" title="可能是文件过大造成的解决办法"></a>可能是文件过大造成的解决办法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">$ git config http.postBuffer 524288000</div><div class="line">Administrator@2011-20151010QW MINGW64 /d/Git/Hexo1 (master)</div><div class="line">$ git push -u origin master</div><div class="line">Counting objects: 159, done.</div><div class="line">Delta compression using up to 4 threads.</div><div class="line">Compressing objects: 100% (150/150), done.</div><div class="line">Writing objects: 100% (159/159), 521.63 KiB | 0 bytes/s, done.</div><div class="line">Total 159 (delta 3), reused 0 (delta 0)</div><div class="line">remote: Resolving deltas: 100% (3/3), done.</div><div class="line">To github.com:gyymz1993/GitHubHexo.git</div><div class="line"> * [new branch]      master -&gt; master</div><div class="line">Branch master set up to track remote branch master from origin.</div></pre></td></tr></table></figure>
+<h3 id="当你修改你的项目提交"><a href="#当你修改你的项目提交" class="headerlink" title="当你修改你的项目提交"></a>当你修改你的项目提交</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$  git add . </div><div class="line">$  git commit -m &apos;update&apos;</div><div class="line">$  git push</div></pre></td></tr></table></figure>
+<h3 id="当你本地删除文件后需要拉取GitHub文件执行，意思是还原和服务器同步"><a href="#当你本地删除文件后需要拉取GitHub文件执行，意思是还原和服务器同步" class="headerlink" title="当你本地删除文件后需要拉取GitHub文件执行，意思是还原和服务器同步"></a>当你本地删除文件后需要拉取GitHub文件执行，意思是还原和服务器同步</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  git checkout .</div></pre></td></tr></table></figure>
+<h3 id="当你在gitHub服务修改文件后必须pull才能修改到本地"><a href="#当你在gitHub服务修改文件后必须pull才能修改到本地" class="headerlink" title="当你在gitHub服务修改文件后必须pull才能修改到本地"></a>当你在gitHub服务修改文件后必须pull才能修改到本地</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  git pull</div></pre></td></tr></table></figure>
+<h3 id="下载一个项目到本地"><a href="#下载一个项目到本地" class="headerlink" title="下载一个项目到本地"></a>下载一个项目到本地</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  git clone git@github.com:yourname/XXX.git</div></pre></td></tr></table></figure>
+<p><br></p>
+<h1 id="更牛逼的部分，搭建自己的博客"><a href="#更牛逼的部分，搭建自己的博客" class="headerlink" title="更牛逼的部分，搭建自己的博客"></a>更牛逼的部分，搭建自己的博客</h1><p><br></p>
+<h3 id="需要用到的工具node-js-msi-下载"><a href="#需要用到的工具node-js-msi-下载" class="headerlink" title="需要用到的工具node.js.msi 下载"></a>需要用到的工具<a href="http://nodejs.cn/download/" target="_blank" rel="external">node.js.msi</a> 下载</h3><h5 id="安装只需要一直next就可以"><a href="#安装只需要一直next就可以" class="headerlink" title="安装只需要一直next就可以"></a>安装只需要一直next就可以</h5><h3 id="next完后测试是否安装成功"><a href="#next完后测试是否安装成功" class="headerlink" title="next完后测试是否安装成功"></a>next完后测试是否安装成功</h3><h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$  找到安装目录    C:\node</div><div class="line">   配置环境变量  path  加上  C:\node</div></pre></td></tr></table></figure>
+<h3 id="测试方法"><a href="#测试方法" class="headerlink" title="测试方法"></a>测试方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  npm --v</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  node -v</div></pre></td></tr></table></figure>
+<h4 id="如果出现版本号则正确安装"><a href="#如果出现版本号则正确安装" class="headerlink" title="如果出现版本号则正确安装"></a>如果出现版本号则正确安装</h4><h3 id="本地博客环境创建-安装hexo"><a href="#本地博客环境创建-安装hexo" class="headerlink" title="本地博客环境创建 安装hexo"></a>本地博客环境创建 安装hexo</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  npm install -g hexo</div></pre></td></tr></table></figure>
+<h3 id="保存安装"><a href="#保存安装" class="headerlink" title="保存安装"></a>保存安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  npm install hexo --save</div></pre></td></tr></table></figure>
+<h3 id="查看-hexo是否安装成功"><a href="#查看-hexo是否安装成功" class="headerlink" title="查看 hexo是否安装成功"></a>查看 hexo是否安装成功</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  hexo -v</div></pre></td></tr></table></figure>
+<h3 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  hexo init</div></pre></td></tr></table></figure>
+<h3 id="开始本地服务"><a href="#开始本地服务" class="headerlink" title="开始本地服务"></a>开始本地服务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$  hexo s</div></pre></td></tr></table></figure>
+<p>再浏览器中输入 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>    即可浏览</p>
+<h3 id="找到hexo目录下的D-Git-Hexo-config-yml文件修改项目中的ssh路径"><a href="#找到hexo目录下的D-Git-Hexo-config-yml文件修改项目中的ssh路径" class="headerlink" title="找到hexo目录下的D:\Git\Hexo_config.yml文件修改项目中的ssh路径"></a>找到hexo目录下的D:\Git\Hexo_config.yml文件修改项目中的ssh路径</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:yourname/yourname.github-io.git</div></pre></td></tr></table></figure>
+<h3 id="修改成这样执行"><a href="#修改成这样执行" class="headerlink" title="修改成这样执行"></a>修改成这样执行</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<h3 id="生成静态网页"><a href="#生成静态网页" class="headerlink" title="生成静态网页"></a>生成静态网页</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div></pre></td></tr></table></figure>
+<h3 id="部署到服务器"><a href="#部署到服务器" class="headerlink" title="部署到服务器"></a>部署到服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo d</div></pre></td></tr></table></figure>
+<h1 id="折腾（换电脑后使用）-目前自己笨方法"><a href="#折腾（换电脑后使用）-目前自己笨方法" class="headerlink" title="折腾（换电脑后使用） 目前自己笨方法"></a>折腾（换电脑后使用） 目前自己笨方法</h1><p><br></p>
+<h3 id="前面得操作一样，紧跟着初-始化hexo后用原来的博文文件替换现在的文件"><a href="#前面得操作一样，紧跟着初-始化hexo后用原来的博文文件替换现在的文件" class="headerlink" title="前面得操作一样，紧跟着初 ##始化hexo后用原来的博文文件替换现在的文件"></a>前面得操作一样，紧跟着初 ##始化hexo后用原来的博文文件替换现在的文件</h3><p>1 Hexo\node_modules（这个其实就是你安装的插件什么搜索系统啊之类的）<br>2 _config.yml 你自己的配置文件<br>3 \Hexo\source 目录下你的所有博客文件<br>4 themes\yelee 这个是你的主题文件<br>当你替换好之后开始接着到</p>
+<p>开始本地服务&gt;后的操作</p>
+<h3 id="直到最后一步部署到服务器"><a href="#直到最后一步部署到服务器" class="headerlink" title="直到最后一步部署到服务器"></a>直到最后一步部署到服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo d</div><div class="line">ERROR Deployer not found: git</div></pre></td></tr></table></figure>
+<p>这是咋回事呢？</p>
+<h3 id="重新安装deployer"><a href="#重新安装deployer" class="headerlink" title="重新安装deployer"></a>重新安装deployer</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git</div></pre></td></tr></table></figure>
+<h3 id="保存安装deployer"><a href="#保存安装deployer" class="headerlink" title="保存安装deployer"></a>保存安装deployer</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<h1 id="Hexo-node-modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装"><a href="#Hexo-node-modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装" class="headerlink" title="Hexo\node_modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装"></a>Hexo\node_modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装</h1><h1 id="Hexo-node-modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装-1"><a href="#Hexo-node-modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装-1" class="headerlink" title="Hexo\node_modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装"></a>Hexo\node_modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装</h1><h1 id="Hexo-node-modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装-2"><a href="#Hexo-node-modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装-2" class="headerlink" title="Hexo\node_modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装"></a>Hexo\node_modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装</h1></the>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>Title:</span><a href="/2016/12/12/Git_Make/">手把手教你Git安装、配置和使用以及博客搭建</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">Mr●Yang</a></p>
+        <p><span>Created:</span>2016-12-12, 15:28:38</p>
+        <p><span>Updated:</span>2017-03-02, 18:32:18</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/2016/12/12/Git_Make/" title="手把手教你Git安装、配置和使用以及博客搭建">https://gyymz1993.github.io/2016/12/12/Git_Make/</a>
+            <span class="copy-path" data-clipboard-text="From https://gyymz1993.github.io/2016/12/12/Git_Make/　　By Mr●Yang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2016/12/21/Svn/">
+                    开发之Svn安装使用
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/12/09/MarkDow/">
+                    手把手教你MarkDown写作
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Please-read-happily"><span class="toc-number">1.</span> <span class="toc-text">Please read happily</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#需要用到的工具"><span class="toc-number">1.1.</span> <span class="toc-text">需要用到的工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Git只需要一直next就可以"><span class="toc-number">1.2.</span> <span class="toc-text">安装Git只需要一直next就可以</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置Git"><span class="toc-number">2.</span> <span class="toc-text">配置Git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置用户名"><span class="toc-number">2.1.</span> <span class="toc-text">配置用户名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置邮箱"><span class="toc-number">2.2.</span> <span class="toc-text">配置邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#保存"><span class="toc-number">2.3.</span> <span class="toc-text">保存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置ssh-这个很重要哦"><span class="toc-number">2.4.</span> <span class="toc-text">设置ssh 这个很重要哦</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看你的C盘Users-Administrator目录"><span class="toc-number">2.5.</span> <span class="toc-text">查看你的C盘Users/Administrator目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#强制查看是否关联Github"><span class="toc-number">2.6.</span> <span class="toc-text">强制查看是否关联Github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#说到这里了，肯定是设置SSH呢"><span class="toc-number">2.7.</span> <span class="toc-text">说到这里了，肯定是设置SSH呢</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#再次查看是否关联Github"><span class="toc-number">2.8.</span> <span class="toc-text">再次查看是否关联Github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#妈蛋居然提示失败，我发现我复制的时候没有复制完全，纯属意外"><span class="toc-number">2.9.</span> <span class="toc-text">妈蛋居然提示失败，我发现我复制的时候没有复制完全，纯属意外</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#这个命令可以查看出错信息"><span class="toc-number">2.10.</span> <span class="toc-text">这个命令可以查看出错信息</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#现在就是最实用最牛逼得部分了"><span class="toc-number"></span> <span class="toc-text">现在就是最实用最牛逼得部分了</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#提交本地项目步骤"><span class="toc-number">0.1.</span> <span class="toc-text">提交本地项目步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#增加注释文件"><span class="toc-number">0.2.</span> <span class="toc-text">增加注释文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化仓库"><span class="toc-number">0.3.</span> <span class="toc-text">初始化仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加所有文件"><span class="toc-number">0.4.</span> <span class="toc-text">添加所有文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#commit"><span class="toc-number">0.5.</span> <span class="toc-text">commit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#你的gitHub项目的SSH路径"><span class="toc-number">0.6.</span> <span class="toc-text">你的gitHub项目的SSH路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#最后一步就是提交了"><span class="toc-number">0.7.</span> <span class="toc-text">最后一步就是提交了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#今天提交遇见这种错误"><span class="toc-number">0.8.</span> <span class="toc-text">今天提交遇见这种错误</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#可能是文件过大造成的解决办法"><span class="toc-number">0.9.</span> <span class="toc-text">可能是文件过大造成的解决办法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#当你修改你的项目提交"><span class="toc-number">0.10.</span> <span class="toc-text">当你修改你的项目提交</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#当你本地删除文件后需要拉取GitHub文件执行，意思是还原和服务器同步"><span class="toc-number">0.11.</span> <span class="toc-text">当你本地删除文件后需要拉取GitHub文件执行，意思是还原和服务器同步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#当你在gitHub服务修改文件后必须pull才能修改到本地"><span class="toc-number">0.12.</span> <span class="toc-text">当你在gitHub服务修改文件后必须pull才能修改到本地</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#下载一个项目到本地"><span class="toc-number">0.13.</span> <span class="toc-text">下载一个项目到本地</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#更牛逼的部分，搭建自己的博客"><span class="toc-number"></span> <span class="toc-text">更牛逼的部分，搭建自己的博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#需要用到的工具node-js-msi-下载"><span class="toc-number">0.1.</span> <span class="toc-text">需要用到的工具node.js.msi 下载</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#安装只需要一直next就可以"><span class="toc-number">0.1.0.1.</span> <span class="toc-text">安装只需要一直next就可以</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#next完后测试是否安装成功"><span class="toc-number">0.2.</span> <span class="toc-text">next完后测试是否安装成功</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置环境变量"><span class="toc-number">0.3.</span> <span class="toc-text">配置环境变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试方法"><span class="toc-number">0.4.</span> <span class="toc-text">测试方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#如果出现版本号则正确安装"><span class="toc-number">0.4.1.</span> <span class="toc-text">如果出现版本号则正确安装</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地博客环境创建-安装hexo"><span class="toc-number">0.5.</span> <span class="toc-text">本地博客环境创建 安装hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#保存安装"><span class="toc-number">0.6.</span> <span class="toc-text">保存安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看-hexo是否安装成功"><span class="toc-number">0.7.</span> <span class="toc-text">查看 hexo是否安装成功</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化hexo"><span class="toc-number">0.8.</span> <span class="toc-text">初始化hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开始本地服务"><span class="toc-number">0.9.</span> <span class="toc-text">开始本地服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#找到hexo目录下的D-Git-Hexo-config-yml文件修改项目中的ssh路径"><span class="toc-number">0.10.</span> <span class="toc-text">找到hexo目录下的D:\Git\Hexo_config.yml文件修改项目中的ssh路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改成这样执行"><span class="toc-number">0.11.</span> <span class="toc-text">修改成这样执行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#生成静态网页"><span class="toc-number">0.12.</span> <span class="toc-text">生成静态网页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#部署到服务器"><span class="toc-number">0.13.</span> <span class="toc-text">部署到服务器</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#折腾（换电脑后使用）-目前自己笨方法"><span class="toc-number"></span> <span class="toc-text">折腾（换电脑后使用） 目前自己笨方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#前面得操作一样，紧跟着初-始化hexo后用原来的博文文件替换现在的文件"><span class="toc-number">0.1.</span> <span class="toc-text">前面得操作一样，紧跟着初 ##始化hexo后用原来的博文文件替换现在的文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#直到最后一步部署到服务器"><span class="toc-number">0.2.</span> <span class="toc-text">直到最后一步部署到服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重新安装deployer"><span class="toc-number">0.3.</span> <span class="toc-text">重新安装deployer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#保存安装deployer"><span class="toc-number">0.4.</span> <span class="toc-text">保存安装deployer</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo-node-modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装"><span class="toc-number"></span> <span class="toc-text">Hexo\node_modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo-node-modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装-1"><span class="toc-number"></span> <span class="toc-text">Hexo\node_modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo-node-modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装-2"><span class="toc-number"></span> <span class="toc-text">Hexo\node_modules（这个其实就是你安装的插件什么搜索系统啊之类的）这部分其实替换没有用，必须重新安装</span></a>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+    <script>
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"手把手教你Git安装、配置和使用以及博客搭建　| 择高处立，向宽处行　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+        <div class="addthis_sharing_toolbox"></div>
+    
+</div>
+
+
+
+
+
+
+
+    
+        <section class="youyan" id="comments">
+    <script>
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = 'http://v2.uyan.cc/code/uyan.js?uid=2128826';
+            (d.head || d.body).appendChild(s);
+        }
+    </script>
+    
+    <aside class="comment-bar">
+        <a href="javascript:void(0);">
+            <i class="fa fa-commenting-o animated infinite pulse"></i>
+            <i class="fa fa-spinner fa-pulse"></i>
+            <span class="count-comment"></span>
+        </a>
+    </aside>
+    <script>
+        var $commentBar = $("#comments aside.comment-bar");
+        var load$hide = function(){
+            $commentBar.find("a > i").toggle();
+            loadComment();
+            $commentBar.fadeOut(800);
+        }
+        $commentBar.click(function(){
+            load$hide();
+        })
+        $commentBar.children("a").hover(function(){
+            load$hide();
+        })
+        if (window.location.hash === "#comments") {
+            load$hide();
+        }
+    </script>
+
+    <div id="uyan_frame"></div>
+</section>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/12/21/Svn/" title="Pre: 开发之Svn安装使用">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/12/09/MarkDow/" title="Next: 手把手教你MarkDown写作">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/03/Android面试/">Android基本面试题</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/21/Svn/">开发之Svn安装使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/12/Git_Make/">手把手教你Git安装、配置和使用以及博客搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/09/MarkDow/">手把手教你MarkDown写作</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/07/GitHub/">我的GitHub之旅</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2017 Mr●Yang
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+    <script src="/js/GithubRepoWidget.js"></script>
+
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+             github: ".github-widget a", 
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "你不爱我了(つェ⊂)" + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "终于看我了(*´∇｀*)" + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
