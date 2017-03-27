@@ -337,7 +337,7 @@
     <!-- Tag Cloud Page -->
     <hr>
 <br>
-<ul class="category-list"></ul>
+
 
 <p class="count"></p>
 
@@ -438,44 +438,13 @@
 
 
     
-      <div class="duoshuo" id="comments">
-    <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="tags/index.html" data-title="tags" data-url="https://gyymz1993.github.io/tags/index.html"></div>
+        <section class="youyan" id="comments">
     <script>
-        var duoshuoQuery = {short_name:"gyymz1993"};
         var loadComment = function(){
             var d = document, s = d.createElement('script');
-            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-            s.async = true; s.charset = 'UTF-8';
+            s.src = 'http://v2.uyan.cc/code/uyan.js?uid=2128826';
             (d.head || d.body).appendChild(s);
         }
-
-		$(function() {
-			var ds = document.createElement('script');
-			ds.type = 'text/javascript';ds.async = true;
-			ds.src = 'https://gyymz1993.github.io/js/embed.js';
-			/*上面是我自己的 embed.js 链接，请改为你自己的地址*/
-			ds.charset = 'UTF-8';
-			(document.getElementsByTagName('head')[0] 
-			|| document.getElementsByTagName('body')[0]).appendChild(ds);
-		})();
-		
-		
-        
-            // Add comment count
-            $(function(){ 
-                var jsonUrl = "http://api.duoshuo.com/threads/counts.jsonp?short_name=gyymz1993&threads=tags/index.html&callback=?";
-                $.getJSON(jsonUrl, function(result){
-                    $.each(result.response, function(i, field){
-                        var value = field.comments;
-                        if (value > 0) {
-                            $(".count-comment").text(value);
-                            return;
-                        }
-                    })
-                })
-            })
-        
     </script>
     
     <aside class="comment-bar">
@@ -503,7 +472,8 @@
         }
     </script>
 
-</div>
+    <div id="uyan_frame"></div>
+</section>
     
 
 
